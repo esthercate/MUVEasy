@@ -1,0 +1,13 @@
+  [1m[35m (386.9ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (181.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2022-07-29 15:40:58 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 59.3ms | Allocations: 402)
+Completed 200 OK in 110ms (Views: 78.0ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-07-29 15:41:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
