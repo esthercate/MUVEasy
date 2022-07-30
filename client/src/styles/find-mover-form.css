@@ -1,0 +1,122 @@
+.find_movers-left{
+    background: linear-gradient(rgb(249, 168, 38, 0.8), rgb(249, 168, 38, 0.8)),
+    url("../assets/truck5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 65px 35px;
+}
+
+.find_movers-left h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.form__group {
+  width: 30%;
+  margin-bottom: 0;
+}
+
+.form__group input {
+  border: 1px solid #7c8a972a;
+  padding: 8px 10px;
+  width: 100%;
+  outline: none;
+}
+
+.form__group input::placeholder {
+  color: #7c8a97;
+}
+
+.form {
+  background: #fff;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.select__group {
+  width: 30%;
+}
+
+.hero_slider-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 3200px;
+}
+
+.hero_form {
+  position: absolute;
+  bottom: -100px;
+  z-index: 11;
+  width: 100%;
+}
+
+.form_row {
+  background: #fff;
+  box-shadow: 5px 5px 15px -5px #7c8a97;
+}
+
+@media only screen and (max-width: 992px) {
+  .find_movers-left {
+    padding: 65px 22px;
+  }
+
+  .find_movers-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    padding: 30px 10px;
+  }
+
+  .form__group input,
+  .select__group select {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+
+  .hero_form {
+    bottom: -100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .find_movers-left {
+    padding-top: 20px;
+    padding-bottom: 0;
+    background: #fff;
+    text-align: center;
+  }
+
+  .form {
+    padding: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .form__group {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .form__group input {
+    font-size: 0.7rem !important;
+  }
+
+  .select__group {
+    width: 100%;
+    padding-right: 10px;
+    font-size: 0.7rem;
+  }
+
+  .find_movers-left h2 {
+    font-size: 1rem;
+  }
+
+  .hero_form {
+    bottom: -250px;
+  }
+}
