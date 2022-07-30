@@ -1,0 +1,36 @@
+.header_top {
+  padding: 10px 0px;
+  border-bottom: 1px solid #1a194d;
+}
+
+.header_top_left {
+  display: flex;
+  align-items: center;
+  column-gap: .8rem;
+  font-size: 1.2rem;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+i {
+    color: #ee4d38;
+}
+
+.site_name {
+    font-weight: 700;
+    color: #1a194d;
+}
+
+
+.header_top_right a {
+    text-decoration: none;
+    color: #ee4d38;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.header_top_right a:hover {
+    color: #1a194d;
+}
