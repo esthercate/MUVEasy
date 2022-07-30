@@ -7,8 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #e8e8fd;
+  font-family: 'Source Sans Pro', sans-serif; 
 }
 
 /*=========== predefined css =============*/
@@ -57,12 +56,11 @@ section {
 }
 
 .btn {
-  padding: 7px 15px;
-  background-color: #ee4d38;
-  color: #fff;
+  background-color: #ee4d38 !important;
+  color: #e8e8fd !important;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .btn:hover {
