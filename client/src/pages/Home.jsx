@@ -3,6 +3,8 @@ import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 import FindMoverForm from "../components/UI/FindMoverForm";
+import moverData from '../assets/data/MoverData'
+import MoverList from "../components/UI/MoverList";
 
 const Home = () => {
   return (
@@ -26,6 +28,25 @@ const Home = () => {
             </Row>
           </Container>
         </div>
+      </section>
+
+      {/* ================ movers list =============== */}
+      <section>
+        <Container>
+          <Row>
+            {moverData.slice(0, 6).map((item) => (
+              <MoverList item={item} key={item.id} />
+            ))}
+          </Row>
+          <div className="find-more p-4 text-center">
+            <button className="btn">
+              Find More
+              <span>
+                <i class="ri-arrow-right-s-line"></i>
+              </span>
+            </button>
+          </div>
+        </Container>
       </section>
     </Helmet>
   );
