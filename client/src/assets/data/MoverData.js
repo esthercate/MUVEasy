@@ -2,134 +2,143 @@ import img01 from "../all-images/cars-img/nissan-offer.png";
 import img02 from "../all-images/cars-img/bmw-offer.png";
 import img03 from "../all-images/cars-img/mercedes-offer.png";
 
-const carData = [
+const moverData = [
   {
     id: 1,
-    brand: "Tesla",
-    rating: 112,
-    carName: "Tesla Malibu",
     imgUrl: img01,
-    model: "Model 3",
+    title: "Home & Office Movers",
     price: 50,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
     id: 2,
-    brand: "Toyota",
-    rating: 102,
-    carName: "Toyota Aventador",
     imgUrl: img02,
-    model: "Model-2022",
+    title: "Home & Office Movers",
     price: 50,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
     id: 3,
-    brand: "BMW",
-    rating: 132,
     carName: "BMW X3",
     imgUrl: img03,
-    model: "Model-2022",
-    price: 65,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
     id: 4,
-    brand: "Nissan",
-    rating: 102,
-    carName: "Nissan Mercielago",
     imgUrl: img01,
-    model: "Model-2022",
-    price: 70,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
     id: 5,
-    brand: "Ferrari",
-    rating: 94,
-    carName: "Ferrari Camry",
     imgUrl: img02,
-    model: "Model-2022",
-    price: 45,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
     id: 6,
-    brand: "Mercedes",
-    rating: 119,
-    carName: "Mercedes Benz XC90",
     imgUrl: img03,
-    model: "Model-2022",
-    price: 85,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
-    id: 7,
-    brand: "Audi",
-    rating: 82,
-    carName: "Audi Fiesta",
+    id: 1,
     imgUrl: img01,
-    model: "Model 3",
+    title: "Home & Office Movers",
     price: 50,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    moverName: "Cate",
+    location: "Kasarani",
   },
 
   {
-    id: 8,
-    brand: "Colorado",
-    rating: 52,
-    carName: "Rolls Royce Colorado",
+    id: 2,
     imgUrl: img02,
-    model: "Model 3",
+    title: "Home & Office Movers",
     price: 50,
-    speed: "20kmpl",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 3,
+    carName: "BMW X3",
+    imgUrl: img03,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 4,
+    imgUrl: img01,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 5,
+    imgUrl: img02,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 6,
+    imgUrl: img03,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 4,
+    imgUrl: img01,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 5,
+    imgUrl: img02,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
+  },
+
+  {
+    id: 6,
+    imgUrl: img03,
+    title: "Home & Office Movers",
+    price: 50,
+    moverName: "Cate",
+    location: "Kasarani",
   },
 ];
 
-export default carData;
+export default moverData;

@@ -34,18 +34,16 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            {moverData.slice(0, 6).map((item) => (
+            {moverData.slice(0, 15).map((item) => (
               <MoverList item={item} key={item.id} />
             ))}
+
+            <div className="find-more text-center">
+              <button className="btn px-5 py-2">
+                Load More
+              </button>
+            </div>
           </Row>
-          <div className="find-more p-4 text-center">
-            <button className="btn">
-              Find More
-              <span>
-                <i class="ri-arrow-right-s-line"></i>
-              </span>
-            </button>
-          </div>
         </Container>
       </section>
     </Helmet>

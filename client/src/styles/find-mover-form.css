@@ -1,5 +1,5 @@
 .find_movers-left{
-    background: linear-gradient(rgb(249, 168, 38, 0.8), rgb(249, 168, 38, 0.8)),
+    background: linear-gradient(rgb(26, 25, 77, 0.9), rgb(26, 25, 77, 0.9)),
     url("../assets/truck5.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +9,8 @@
 
 .find_movers-left h2 {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #ee4d38;
 }
 
 .form__group {
@@ -18,10 +19,12 @@
 }
 
 .form__group input {
-  border: 1px solid #7c8a972a;
+  border: none;
   padding: 8px 10px;
   width: 100%;
   outline: none;
+  background: #e8e8fd;
+  border-radius: 5px;
 }
 
 .form__group input::placeholder {
@@ -29,7 +32,7 @@
 }
 
 .form {
-  background: #fff;
+  background: #f8f8ff;
   padding-top: 55px;
   padding-bottom: 50px;
   padding-left: 15px;
@@ -48,13 +51,13 @@
 
 .hero_form {
   position: absolute;
-  bottom: -100px;
   z-index: 11;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .form_row {
-  background: #fff;
+  background: #f8f8ff;
   box-shadow: 5px 5px 15px -5px #7c8a97;
 }
 
