@@ -1,9 +1,15 @@
 import React from 'react'
+import { Container } from 'reactstrap'
+import Dashboard from '../components/UI/Dashboard'
 
 const MoverDashboard = () => {
   return (
-    <div>MoverDashboard</div>
-  )
+    <>
+      <Container>
+        <Dashboard />
+      </Container>
+    </>
+  );
 }
 
 export default MoverDashboard

@@ -1,0 +1,61 @@
+.my-dashboard{
+    margin: 4rem 0;
+}
+.left-col{
+    background: #f8f8ff;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.user_image {
+    background: url('../assets/truck5.jpg');
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-right: .8rem;
+}
+
+.user_details {
+     color: #1a194d;
+}
+.user_details h6 {
+    font-weight: 600;
+}
+.links span{
+     color: #1a194d;
+     font-weight: 400;
+}
+.links a{
+    text-decoration: none;
+}
+
+.links a:hover {
+   font-weight: 700;
+
+}
+
+i {
+    margin-right: 4px;
+    font-size: 1.2rem;
+}
+
+.logout a {
+    text-decoration: none;
+}
+
+.logout span {
+    color: #1a194d;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.right-col {
+  border: 1px solid #1a194d10;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #fcfcff;
+}
