@@ -1,17 +1,17 @@
-import React from 'react'
-import { Container } from 'reactstrap'
-import Login from '../components/UI/Login'
-import Register from '../components/UI/Register';
+import React from "react";
+import { Container } from "reactstrap";
+import Login from "../components/UI/Login";
+import Register from "../components/UI/Register";
 
 const Auth = () => {
   return (
     <section>
       <Container>
-      <Login />
-        <Register />
+          <Login />
+          <Register />
       </Container>
     </section>
   );
-}
+};
 
-export default Auth
+export default Auth;

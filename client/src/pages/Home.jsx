@@ -34,7 +34,7 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            {moverData.slice(0, 15).map((item) => (
+            {moverData.slice(0, 9).map((item) => (
               <MoverList item={item} key={item.id} />
             ))}
 
