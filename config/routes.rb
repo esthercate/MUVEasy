@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :profiles, only: [:index]
   post "/signup", to: "users#create"
 
   

@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { Container, Row, Col } from "reactstrap";
-import '../../styles/hero-slider.css'
+import "../../styles/hero-slider.css";
 
 const HeroSlider = () => {
   const settings = {
@@ -21,7 +21,9 @@ const HeroSlider = () => {
         <Row>
           <Col lg="6">
             <div className="slider_content">
-              <h1 className="mb-3">Relocation made easy<span className="app">!</span></h1>
+              <h1 className="mb-3">
+                Relocation made easy<span className="app">!</span>
+              </h1>
               <h5 className="mb-4">
                 Fast, easy and affordable way to relocate! It doesn’t need to be
                 a hassle to make a moving plan. In just a few minutes, choose a

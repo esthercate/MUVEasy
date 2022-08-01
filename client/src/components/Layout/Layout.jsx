@@ -3,12 +3,12 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Routers from '../../routers/Routers'
 
-const Layout = () => {
+const Layout = ({profiles}) => {
   return (
     <>
         <Header />
         <div>
-            <Routers />
+            <Routers profiles={profiles} />
         </div>
         <Footer />
     </>

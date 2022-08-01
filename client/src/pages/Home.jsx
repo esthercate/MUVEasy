@@ -3,10 +3,10 @@ import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 import FindMoverForm from "../components/UI/FindMoverForm";
-import moverData from '../assets/data/MoverData'
+//import moverData from '../assets/data/MoverData'
 import MoverList from "../components/UI/MoverList";
 
-const Home = () => {
+const Home = ({profiles}) => {
   return (
     <Helmet title="Home">
       {/* ===================== hero section ====================== */}
@@ -34,8 +34,8 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            {moverData.slice(0, 9).map((item) => (
-              <MoverList item={item} key={item.id} />
+            {profiles.slice(0, 9).map((profile) => (
+              <MoverList profile={profile} key={profile.id} />
             ))}
 
             <div className="find-more text-center">

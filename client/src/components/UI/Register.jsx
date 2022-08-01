@@ -43,7 +43,6 @@ const Register = () => {
                 aria-label="Default select example"
                 value={role}
                 className="mb-4"
-                id="role"
                 onChange={(e) => setRole(e.target.value)}
               >
                 <option>Role</option>
@@ -57,7 +56,6 @@ const Register = () => {
                 <Form.Label>Username</Form.Label>
                 <Form.Control
                   type="text"
-                  id="username"
                   autoComplete="off"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
@@ -69,7 +67,6 @@ const Register = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
-                  id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
@@ -81,7 +78,6 @@ const Register = () => {
                 <Form.Label>Confirm Password</Form.Label>
                 <Form.Control
                   type="password"
-                  id="password_confirmation"
                   value={passwordConfirmation}
                   onChange={(e) => setPasswordConfirmation(e.target.value)}
                   placeholder="Password"

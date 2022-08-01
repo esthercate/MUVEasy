@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import '../../styles/mover-list.css'
 
 
-const MoverList = (props) => {
+const MoverList = ({profile}) => {
 
-    const { imgUrl, title, price, moverName, location } = props.item;
+    const { imgUrl, title, price, moverName, location } = profile;
   
     return (
       <Col lg="4" md="4" sm="6" className="mb-5">
         <div className="mover_item">
-          <div className="car__img">
-            <img src={imgUrl} alt="" className="w-100" />
+          <div className="imgurl">
+            <img src={imgUrl} alt="" className="w-100 imgurl" />
           </div>
 
           <div className="mover_item-content mt-4">

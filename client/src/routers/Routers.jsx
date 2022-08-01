@@ -8,11 +8,11 @@ import Auth from '../pages/Auth'
 import NotFound from '../pages/NotFound'
 
 
-const Routers = () => {
+const Routers = ({profiles}) => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home profiles={profiles} />} />
       <Route path="/moverdetails" element={<MoverDetails />} />
       <Route path="/moverdashboard" element={<MoverDashboard />} />
       <Route path="/clientrdashboard" element={<ClientDashboard />} />

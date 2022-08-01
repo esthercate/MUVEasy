@@ -9,6 +9,10 @@
   font-size: 1.1rem;
 }
 
+.imgurl {
+  border-radius: 20px 0px 20px 0px;
+}
+
 .mover_item-btn {
   border-radius: 0;
   border: none;
