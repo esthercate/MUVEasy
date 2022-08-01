@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import "../../styles/login.css";
 
 const Register = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [role, setRole] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/signup", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        username,
+        password,
+        password_confirmation: passwordConfirmation,
+        role,
+      }),
+    })
+    .then((r) => r.json())
+    .then((user) => console.log(user))
+  }
+
   return (
     <>
       <Container>
@@ -17,26 +38,55 @@ const Register = () => {
               Register
             </h1>
 
-            <Form>
-              <Form.Select aria-label="Default select example" className="mb-4">
+            <Form onSubmit={handleSubmit}>
+              <Form.Select
+                aria-label="Default select example"
+                value={role}
+                className="mb-4"
+                id="role"
+                onChange={(e) => setRole(e.target.value)}
+              >
                 <option>Role</option>
-                <option value="1">User - Looking for transport services</option>
-                <option value="2">Transport Service Provider</option>
+                <option value="user">
+                  User - Looking for transport services
+                </option>
+                <option value="mover">Transport Service Provider</option>
               </Form.Select>
 
               <Form.Group controlId="formBasicEmail" className="mb-4">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" />
+                <Form.Control
+                  type="text"
+                  id="username"
+                  autoComplete="off"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Enter username"
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword" className="mb-4">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                  autoComplete="current-password"
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword" className="mb-4">
                 <Form.Label>Confirm Password</Form.Label>
-                <Form.Control type="password" placeholder="Confirm Password" />
+                <Form.Control
+                  type="password"
+                  id="password_confirmation"
+                  value={passwordConfirmation}
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  placeholder="Password"
+                  autoComplete="current-password"
+                />
               </Form.Group>
 
               <Button variant="btn-block" type="submit" className="px-4">
