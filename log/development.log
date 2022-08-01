@@ -587,3 +587,43 @@ Processing by ProfilesController#index as */*
 Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 2869)
 
 
+Started GET "/profiles" for 127.0.0.1 at 2022-08-01 23:29:16 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 25.6ms | Allocations: 5984)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-01 23:29:58 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.28ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 2.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-01 23:31:21 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.35ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.6ms | Allocations: 2869)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-01 23:31:32 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 1.0ms | Allocations: 2870)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-01 23:31:39 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (3.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.99ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 3.1ms | Allocations: 2847)
+
+

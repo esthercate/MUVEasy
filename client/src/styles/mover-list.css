@@ -4,6 +4,12 @@
   border-radius: 5px;
 }
 
+.mover_item h6 {
+    font-size: 1rem !important;
+    opacity: 90%;
+    margin-top: 10px;
+  }
+
 .mover_item-info span i {
   color: #ee4d38;
   font-size: 1.1rem;
