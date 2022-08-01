@@ -10,7 +10,7 @@ const MoverList = ({profile}) => {
   
     return (
       <Col lg="4" md="4" sm="6" className="mb-5">
-        <div className="mover_item">
+        <div className="mover_item px-5 py-4">
           <div className="imgurl">
             <img src={imgUrl} alt="" className="w-100 imgurl" />
           </div>
