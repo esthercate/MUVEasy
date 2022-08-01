@@ -627,3 +627,11 @@ Processing by ProfilesController#index as */*
 Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 3.1ms | Allocations: 2847)
 
 
+Started GET "/profiles" for 127.0.0.1 at 2022-08-01 23:35:06 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.34ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 2847)
+
+

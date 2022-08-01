@@ -1,5 +1,5 @@
 .mover_item {
-  border: 1px solid #1a194d20;
+  border: 1px solid #1a194d10;
   padding: 20px;
   border-radius: 5px;
 }
@@ -25,6 +25,7 @@
   outline: none;
   background: #1a194d;
   padding: 8px 0px;
+  font-weight: 600;
 }
 
 .mover_item-btn a {
