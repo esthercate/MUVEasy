@@ -2,9 +2,13 @@ Rails.application.routes.draw do
   
   resources :profiles, only: [:index]
 
-  resources :users #delete this
-
   post "/signup", to: "users#create"
+
+  get "/me", to: "users#show"
+
+  #post "/login", to: "sessions#create"
+
+  #delete "/logout", to: "sessions#destroy"
 
   
 
