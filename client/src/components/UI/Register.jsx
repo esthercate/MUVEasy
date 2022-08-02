@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../../styles/login.css";
 
 const Register = () => {
@@ -27,7 +28,7 @@ const Register = () => {
   return (
     <>
       <Container>
-        <Row className="mt-4">
+        <Row className="mt-5 mb-5">
           <Col
             lg={5}
             md={6}
@@ -89,8 +90,11 @@ const Register = () => {
                 Submit
               </Button>
             </Form>
-            <h6 className="mt-4 p-2 text-center text-secondary ">
-              Already registered? Login here.
+            <h6 className="mt-4 p-2 mb-5 text-center text-secondary ">
+              Already have an account? Login{" "}
+              <span>
+                <Link to="/login"> here</Link>
+              </span>
             </h6>
           </Col>
         </Row>

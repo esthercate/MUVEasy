@@ -4,8 +4,9 @@ import Home from '../pages/Home'
 import MoverDetails from '../pages/MoverDetails'
 import MoverDashboard from '../pages/MoverDashboard'
 import ClientDashboard from '../pages/ClientDashboard'
-import Auth from '../pages/Auth'
 import NotFound from '../pages/NotFound'
+import Login from '../components/UI/Login'
+import Register from '../components/UI/Register'
 
 
 const Routers = ({profiles}) => {
@@ -16,7 +17,8 @@ const Routers = ({profiles}) => {
       <Route path="/moverdetails" element={<MoverDetails />} />
       <Route path="/moverdashboard" element={<MoverDashboard />} />
       <Route path="/clientrdashboard" element={<ClientDashboard />} />
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

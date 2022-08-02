@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../../styles/login.css"
 
 const Login = () => {
   return (
     <>
       <Container>
-        <Row className="mt-4">
+        <Row className="mt-5 mb-5">
           <Col
             lg={5}
             md={6}
@@ -32,8 +33,11 @@ const Login = () => {
                 Login
               </Button>
             </Form>
-            <h6 className="mt-4 p-2 text-center text-secondary ">
-              Don't have an account yet! Register here.
+            <h6 className="mt-4 p-2 mb-5 text-center text-secondary ">
+              Don't have an account yet? Register <span><Link to="/register">
+                here
+              </Link>
+              </span>
             </h6>
           </Col>
         </Row>

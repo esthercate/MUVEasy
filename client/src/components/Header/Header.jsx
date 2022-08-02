@@ -20,10 +20,10 @@ const Header = () => {
 
             <Col lg="6" md="6" sm="6">
               <div className="header_top_right d-flex align-items-center justify-content-end gap-3">
-                <Link to="#" className="d-flex align-items-center gap-1">
+                <Link to="/login" className="d-flex align-items-center gap-1">
                    Login
                 </Link>
-                <Link to="#" className="d-flex align-items-center gap-1">
+                <Link to="/register" className="d-flex align-items-center gap-1">
                    Register
                 </Link>
               </div>

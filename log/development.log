@@ -635,3 +635,327 @@ Processing by ProfilesController#index as */*
 Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 2847)
 
 
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:43:07 +0300
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (117.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.0ms)
+Completed 200 OK in 200ms (Views: 29.3ms | ActiveRecord: 155.8ms | Allocations: 10734)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:45:11 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (29.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 51ms (Views: 21.0ms | ActiveRecord: 29.9ms | Allocations: 2869)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:46:55 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 110ms (Views: 109.6ms | ActiveRecord: 0.6ms | Allocations: 2869)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:47:04 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.76ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.4ms | Allocations: 2869)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:54:23 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 103ms (Views: 102.7ms | ActiveRecord: 68.3ms | Allocations: 5962)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:55:56 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (4.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.41ms)
+Completed 200 OK in 54ms (Views: 48.8ms | ActiveRecord: 4.9ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 08:56:04 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (107.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 116ms (Views: 8.2ms | ActiveRecord: 107.5ms | Allocations: 2848)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:02:19 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 107ms (Views: 106.5ms | ActiveRecord: 21.4ms | Allocations: 5984)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:02:45 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.99ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:03:36 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.37ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 1.9ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:09:22 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.55ms)
+Completed 200 OK in 144ms (Views: 144.1ms | ActiveRecord: 18.9ms | Allocations: 5962)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:12:13 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.63ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:12:38 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 1.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:13:53 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.21ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:13:56 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 2.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:19:59 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 84ms (Views: 84.1ms | ActiveRecord: 56.6ms | Allocations: 5962)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:20:10 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (70.18ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.5ms | Allocations: 2848)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:20:50 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (6.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.48ms)
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 6.0ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:20:56 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.28ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:22:58 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:24:13 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.02ms)
+Completed 200 OK in 44ms (Views: 43.8ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:26:00 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.31ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.4ms | Allocations: 2837)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:26:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/signup" for 127.0.0.1 at 2022-08-02 09:26:09 +0300
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"signup"}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 1505)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:7:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:26:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-08-02 09:27:20 +0300
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"users"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 242)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:7:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:27:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-08-02 09:27:23 +0300
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"users"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:7:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:27:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-08-02 09:28:43 +0300
+  
+ArgumentError (Before process_action callback :authorize has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:28:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-08-02 09:29:13 +0300
+  
+ArgumentError (Before process_action callback :authorize has not been defined):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:29:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-08-02 09:29:49 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (34.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:12:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.98ms)
+Completed 200 OK in 95ms (Views: 47.4ms | ActiveRecord: 44.8ms | Allocations: 4778)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:29:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 09:30:41 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"kariuki", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"kariuki", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (112.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kariuki"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (52.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "kariuki"], ["password_digest", "$2a$12$tNPhDTfdRN.i.PvY1tyjR.NYItuwX37j0AWlum//SIzjupIEY1K2W"], ["role", "mover"], ["created_at", "2022-08-02 06:30:41.525143"], ["updated_at", "2022-08-02 06:30:41.525143"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 519ms (ActiveRecord: 167.0ms | Allocations: 6719)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x0000000000a0c8>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 09:30:43 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"kariuki", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"kariuki", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kariuki"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (44.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 353ms (ActiveRecord: 45.8ms | Allocations: 4377)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/users" for 127.0.0.1 at 2022-08-02 09:30:48 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:12:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1044)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 09:30:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 09:32:16 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.66ms)
+Completed 200 OK in 44ms (Views: 23.0ms | ActiveRecord: 19.2ms | Allocations: 6856)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-08-02 10:25:31 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:18:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 168ms (Views: 162.6ms | ActiveRecord: 12.0ms | Allocations: 7263)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 10:25:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
