@@ -1182,3 +1182,63 @@ Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 10:45:28 +0300
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 11:34:06 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"kk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"kk", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "kk"], ["password_digest", "$2a$12$KLzPhxFddj7U0.S3IPeP2.SY8oB4Cl.DmGWwdyjfnjT1.jvpEmWb2"], ["role", "mover"], ["created_at", "2022-08-02 08:34:06.821196"], ["updated_at", "2022-08-02 08:34:06.821196"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 65.2ms | Allocations: 6789)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x000000000134c0>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 11:34:14 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.16ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.6ms | Allocations: 6541)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-02 11:34:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 11:44:25 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"kk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"kk", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 11:44:25 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"kk", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"kk", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 631ms (Views: 0.8ms | ActiveRecord: 13.6ms | Allocations: 10073)
+
+
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (6.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kk"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 359ms (Views: 0.5ms | ActiveRecord: 19.9ms | Allocations: 11938)
+
+

@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../../styles/login.css"
+import "../../styles/login.css";
 
 const Login = () => {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
+      .then((r) => r.json())
+      .then((user) => console.log(user));
+
+
+  }
+
   return (
     <>
       <Container>
@@ -18,15 +38,27 @@ const Login = () => {
               Login
             </h1>
 
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formBasicEmail" className="mb-4">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" />
+                <Form.Control
+                  type="text"
+                  autoComplete="off"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Enter username"
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword" className="mb-4">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                  autoComplete="current-password"
+                />
               </Form.Group>
 
               <Button variant="btn-block" type="submit" className="px-4">
@@ -34,9 +66,9 @@ const Login = () => {
               </Button>
             </Form>
             <h6 className="mt-4 p-2 mb-5 text-center text-secondary ">
-              Don't have an account yet? Register <span><Link to="/register">
-                here
-              </Link>
+              Don't have an account yet? Register{" "}
+              <span>
+                <Link to="/register">here</Link>
               </span>
             </h6>
           </Col>
@@ -44,5 +76,5 @@ const Login = () => {
       </Container>
     </>
   );
-}
-export default Login
+};
+export default Login;
