@@ -1242,3 +1242,2212 @@ Completed 422 Unprocessable Entity in 631ms (Views: 0.8ms | ActiveRecord: 13.6ms
 Completed 422 Unprocessable Entity in 359ms (Views: 0.5ms | ActiveRecord: 19.9ms | Allocations: 11938)
 
 
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 12:59:18 +0300
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (44.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.92ms)
+Completed 200 OK in 103ms (Views: 35.6ms | ActiveRecord: 52.7ms | Allocations: 10731)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:20:08 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:20:08 +0300
+  [1m[35m (22.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 75ms (Views: 41.1ms | ActiveRecord: 13.4ms | Allocations: 15183)
+
+
+  [1m[36mUser Load (128.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 212ms (Views: 4.0ms | ActiveRecord: 142.2ms | Allocations: 16869)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:20:43 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:20:43 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (2.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.81ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 2.2ms | Allocations: 3698)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 0.5ms | ActiveRecord: 2.0ms | Allocations: 3761)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:20:52 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:20:52 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 973)
+
+
+  [1m[36mProfile Load (3.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 3.8ms | Allocations: 3729)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:00 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:00 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.17ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 3805)
+
+
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.9ms | Allocations: 3486)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:01 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:01 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1108)
+
+
+  [1m[36mProfile Load (7.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.3ms)
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 7.2ms | Allocations: 3716)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:04 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:04 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.7ms | ActiveRecord: 4.3ms | Allocations: 1541)
+
+
+  [1m[36mProfile Load (14.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.23ms)
+Completed 200 OK in 24ms (Views: 9.9ms | ActiveRecord: 14.3ms | Allocations: 3715)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:06 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.2ms | ActiveRecord: 1.0ms | Allocations: 1163)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:06 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.32ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:19 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:19 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 823)
+
+
+  [1m[36mProfile Load (6.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.2ms)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 6.8ms | Allocations: 4446)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:33 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:33 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 789)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.49ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:21:35 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:21:35 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorize rendered or redirected
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 401 Unauthorized in 13ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 3832)
+
+
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 1.1ms | Allocations: 3713)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:24:03 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 789)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:24:03 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 2847)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:24:38 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:24:38 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.3ms | Allocations: 3490)
+
+
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 4067)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:28:38 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:28:38 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1540)
+
+
+  [1m[36mProfile Load (3.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.16ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 3.4ms | Allocations: 3714)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:29:46 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:29:46 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+  [1m[36mProfile Load (3.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.67ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 3.0ms | Allocations: 3827)
+
+
+Completed 401 Unauthorized in 49ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 3549)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:31:25 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:31:25 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1527)
+
+
+  [1m[36mProfile Load (11.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.51ms)
+Completed 200 OK in 22ms (Views: 10.8ms | ActiveRecord: 11.4ms | Allocations: 3715)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:31:35 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:31:35 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1492)
+
+
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.49ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.6ms | Allocations: 3714)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:32:15 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:32:15 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.67ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.4ms | Allocations: 3485)
+
+
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 3867)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:32:18 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:32:18 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 16ms (Views: 0.5ms | ActiveRecord: 4.4ms | Allocations: 1043)
+
+
+  [1m[36mProfile Load (7.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.85ms)
+Completed 200 OK in 26ms (Views: 18.8ms | ActiveRecord: 7.2ms | Allocations: 3714)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 13:32:24 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:32:24 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 48ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1517)
+
+
+  [1m[36mProfile Load (5.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.21ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 5.9ms | Allocations: 3714)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:34:17 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.53ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:34:23 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (10.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 17ms (Views: 6.7ms | ActiveRecord: 10.0ms | Allocations: 2847)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-02 13:35:10 +0300
+  
+ArgumentError (Before process_action callback :authorize has not been defined):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2022-08-02 13:35:11 +0300
+  
+ArgumentError (Before process_action callback :authorize has not been defined):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:37:32 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2846)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:42:23 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.67ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:44:33 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.48ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:44:42 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.82ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 1.8ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:49:19 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.9ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 13:50:48 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:01:12 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.55ms)
+Completed 200 OK in 214ms (Views: 214.3ms | ActiveRecord: 121.9ms | Allocations: 6019)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:03:06 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.68ms)
+Completed 200 OK in 156ms (Views: 155.5ms | ActiveRecord: 0.4ms | Allocations: 2848)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:03:37 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.35ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 2.9ms | Allocations: 2848)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:13:30 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.16ms)
+Completed 200 OK in 193ms (Views: 193.3ms | ActiveRecord: 44.0ms | Allocations: 5989)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:14:02 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.65ms)
+Completed 200 OK in 68ms (Views: 67.4ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:15:54 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (9.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.04ms)
+Completed 200 OK in 92ms (Views: 82.4ms | ActiveRecord: 9.8ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:57:01 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.71ms)
+Completed 200 OK in 262ms (Views: 257.3ms | ActiveRecord: 36.5ms | Allocations: 5962)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 14:57:22 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"mouse", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"mouse", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (5.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mouse"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (48.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mouse"], ["password_digest", "$2a$12$W9BwzWTWe0CXclit.jU/teGQyR7rZA/rjyydSZ4ltV7X23ewhyV/K"], ["role", "user"], ["created_at", "2022-08-02 11:57:23.160752"], ["updated_at", "2022-08-02 11:57:23.160752"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 392ms (ActiveRecord: 64.7ms | Allocations: 7051)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x000000000077b0>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:57:27 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (10.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.99ms)
+Completed 200 OK in 53ms (Views: 41.6ms | ActiveRecord: 10.0ms | Allocations: 2846)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 14:58:07 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"cup", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"cup", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cup"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "cup"], ["password_digest", "$2a$12$40XnZfEOB86.cH0zcFMPHu5zBx5RyuDCf2Mr9XpSq1s0TiNJsSejO"], ["role", "mover"], ["created_at", "2022-08-02 11:58:07.351759"], ["updated_at", "2022-08-02 11:58:07.351759"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 4.5ms | Allocations: 4464)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000007850>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 14:58:11 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.99ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 1.1ms | Allocations: 2846)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 14:58:33 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"mask", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"mask", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mask"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mask"], ["password_digest", "$2a$12$7eJ/4TdRxizdo7mBlu2/me3gjsshSudUdFtGuuTj5Wf3qzdcRAtZC"], ["role", "mover"], ["created_at", "2022-08-02 11:58:33.782028"], ["updated_at", "2022-08-02 11:58:33.782028"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 4.0ms | Allocations: 4460)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x000000000078f0>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:00:21 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 2846)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:00:47 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.2ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.4ms | Allocations: 2849)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:00:50 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"", "user"=>{"username"=>"", "role"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (4.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (41.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 107ms (Views: 1.1ms | ActiveRecord: 48.9ms | Allocations: 5758)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:01:19 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "coffee"], ["password_digest", "$2a$12$6AjY/qoLNJg4Dv9qk.B0LeDv0lRegfzw14E99rLR.VO68XL1OwPrS"], ["role", "mover"], ["created_at", "2022-08-02 12:01:19.513626"], ["updated_at", "2022-08-02 12:01:19.513626"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 3.9ms | Allocations: 4461)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000007a58>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:02:34 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 289ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 3001)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:02:44 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:02:44 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 581ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 3631)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:02:44 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 584ms (Views: 0.5ms | ActiveRecord: 2.2ms | Allocations: 6744)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 319ms (Views: 0.6ms | ActiveRecord: 11.8ms | Allocations: 9060)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:02:45 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:02:46 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"coffee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"coffee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 577ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 4421)
+
+
+  [1m[36mUser Exists? (10.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "coffee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 298ms (Views: 0.5ms | ActiveRecord: 11.4ms | Allocations: 5739)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:03:13 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.7ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 1.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:03:24 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.9ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:03:37 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (25.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.76ms)
+Completed 200 OK in 86ms (Views: 60.3ms | ActiveRecord: 25.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:03:44 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (10.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+Completed 200 OK in 37ms (Views: 26.9ms | ActiveRecord: 10.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:03:58 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:04:53 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.7ms | Allocations: 2847)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 15:05:13 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"sii", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"sii", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sii"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "sii"], ["password_digest", "$2a$12$18biY05JUOYyAFuc.cOx7OX49s8iax1lEn5fghDOLGAfWdzP3jNQi"], ["role", "user"], ["created_at", "2022-08-02 12:05:13.509387"], ["updated_at", "2022-08-02 12:05:13.509387"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 4.4ms | Allocations: 4458)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000007e40>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started GET "/" for ::1 at 2022-08-02 15:07:34 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 33.1ms | Allocations: 294)
+Completed 200 OK in 70ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 15:07:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2022-08-02 15:07:41 +0300
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 61ms (Views: 1.2ms | ActiveRecord: 51.1ms | Allocations: 1919)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 15:07:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2022-08-02 15:07:58 +0300
+Processing by UsersController#show as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 15:07:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2022-08-02 15:07:59 +0300
+Processing by UsersController#show as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 15:07:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2022-08-02 15:08:21 +0300
+Processing by UsersController#show as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 15:08:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2022-08-02 15:08:35 +0300
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 0.8ms | ActiveRecord: 3.5ms | Allocations: 1734)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 15:08:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:11:48 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (3.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.15ms)
+Completed 200 OK in 78ms (Views: 57.0ms | ActiveRecord: 10.9ms | Allocations: 6914)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:11:56 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.7ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:16:50 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.78ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:29:09 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.99ms)
+Completed 200 OK in 121ms (Views: 120.6ms | ActiveRecord: 79.0ms | Allocations: 6018)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:36:09 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.31ms)
+Completed 200 OK in 89ms (Views: 77.9ms | ActiveRecord: 27.2ms | Allocations: 5963)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:36:10 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.74ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 2.0ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:38:34 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.1ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:38:34 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.91ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:44:28 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.78ms)
+Completed 200 OK in 69ms (Views: 68.5ms | ActiveRecord: 50.0ms | Allocations: 5962)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:45:43 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.01ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:45:44 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:46:43 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.29ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 1.4ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:48:12 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.42ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:50:34 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.16ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.9ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:51:02 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (7.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.2ms)
+Completed 200 OK in 20ms (Views: 12.3ms | ActiveRecord: 7.4ms | Allocations: 2850)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:55:34 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.49ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 1.0ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 15:59:51 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (3.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.85ms)
+Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 3.2ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:00:25 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.59ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 1.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:00:31 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (7.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.75ms)
+Completed 200 OK in 36ms (Views: 27.3ms | ActiveRecord: 7.2ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:00:54 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.86ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 1.3ms | Allocations: 2848)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:01:31 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.1ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.9ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:01:35 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (12.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.07ms)
+Completed 200 OK in 30ms (Views: 17.5ms | ActiveRecord: 12.2ms | Allocations: 2848)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:02:41 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.6ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.7ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:02:55 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (3.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.04ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 3.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:02:57 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (4.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.82ms)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 4.2ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:02:58 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (4.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.96ms)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 4.3ms | Allocations: 2847)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 16:02:59 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.56ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 2847)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfiles (20220801184135)
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (167.4ms)[0m  [1m[35mDROP TABLE "profiles"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220801184135"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfiles (20220801184135)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (169.5ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" bigserial primary key, "imgUrl" character varying, "title" character varying, "price" integer, "moverName" character varying, "location" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220801184135"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToProfiles (20220802180147)
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "profiles" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220802180147"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:46:10 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:46:10 +0300
+  [1m[35m (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (34.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 183ms (Views: 59.8ms | ActiveRecord: 89.3ms | Allocations: 10564)
+
+
+  [1m[36mUser Load (102.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 167ms (Views: 0.5ms | ActiveRecord: 104.8ms | Allocations: 6875)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:46:26 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:46:26 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (8.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 26ms (Views: 17.0ms | ActiveRecord: 8.5ms | Allocations: 1574)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 25ms (Views: 0.2ms | ActiveRecord: 7.8ms | Allocations: 1612)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 22:46:44 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"vee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"vee", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "vee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (4.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "vee"], ["password_digest", "$2a$12$5HCASafOEnD5ICCNQ25yq.VeSk4IwR2lb74Ri3Y2INYOSDobVH/Gm"], ["role", "user"], ["created_at", "2022-08-02 19:46:44.551478"], ["updated_at", "2022-08-02 19:46:44.551478"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "vee"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 13.9ms | Allocations: 7982)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000006c20>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 22:47:54 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"vee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"vee", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "vee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (43.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 479ms (ActiveRecord: 44.4ms | Allocations: 4423)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:48:07 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:48:07 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 23ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1408)
+
+
+  [1m[36mProfile Load (1.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.7ms | Allocations: 1518)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:51:06 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:51:06 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 37ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 1409)
+
+
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.5ms | Allocations: 1520)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 22:51:26 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"bii", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"bii", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bii"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "bii"], ["password_digest", "$2a$12$gnm8sOSSFc0WopDrN3Dlk.mFXavs0g8PSLmhqfyqk405jowyunTZe"], ["role", "user"], ["created_at", "2022-08-02 19:51:26.431764"], ["updated_at", "2022-08-02 19:51:26.431764"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bii"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 3.9ms | Allocations: 5186)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000006dd8>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 22:51:31 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"bii", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"bii", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bii"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 286ms (ActiveRecord: 1.0ms | Allocations: 2408)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:51:34 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:51:34 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.5ms | Allocations: 800)
+
+
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 53ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 2280)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 22:51:37 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"", "user"=>{"username"=>"", "role"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 10ms (ActiveRecord: 2.8ms | Allocations: 3253)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Username can't be blank, Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:51:57 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:51:57 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 744)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 44ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2273)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 22:53:40 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 22:53:40 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (5.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 5.8ms | Allocations: 1496)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 44ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1571)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 22:54:14 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"cee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"cee", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "cee"], ["password_digest", "$2a$12$aTTDOdHvqPicBJiPuMY/peyI12tICTrCEFyXB4ZycFYnmo1mMo4bi"], ["role", "mover"], ["created_at", "2022-08-02 19:54:14.858827"], ["updated_at", "2022-08-02 19:54:14.858827"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "cee"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 4.0ms | Allocations: 5186)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000007030>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:01:00 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:01:00 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 249ms (Views: 0.5ms | ActiveRecord: 58.7ms | Allocations: 4851)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 1428)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 23:01:39 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"truck", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"truck", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "truck"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "truck"], ["password_digest", "$2a$12$xTohi113seo1eVLNljpzG.YFp5QG2ZdWjdKoh4LSuk640180PtzPS"], ["role", "mover"], ["created_at", "2022-08-02 20:01:40.254953"], ["updated_at", "2022-08-02 20:01:40.254953"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "truck"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 16.6ms | Allocations: 7467)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000009088>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:01:50 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:01:50 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 1.1ms | Allocations: 1331)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 136ms (Views: 0.6ms | ActiveRecord: 48.6ms | Allocations: 4841)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 23:01:54 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"", "user"=>{"username"=>"", "role"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 51ms (ActiveRecord: 20.9ms | Allocations: 3220)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Username can't be blank, Password can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:02:47 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:02:47 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 18ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 705)
+
+
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.9ms | Allocations: 2283)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:03:12 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 744)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:03:12 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 706)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 23:03:29 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"reg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"reg", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "reg"], ["password_digest", "$2a$12$zfHI/9hvDkdxPtNBovakuON.K/MEkikWuXRxlWiweHFXBhL9wFW9i"], ["role", "mover"], ["created_at", "2022-08-02 20:03:29.997714"], ["updated_at", "2022-08-02 20:03:29.997714"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "reg"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 6.4ms | Allocations: 5177)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<UsersController:0x00000000009380>
+Did you mean?  user):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:06:19 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:06:19 +0300
+  [1m[36mProfile Load (25.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 36ms (Views: 6.4ms | ActiveRecord: 25.5ms | Allocations: 1420)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 20ms (Views: 1.2ms | ActiveRecord: 9.2ms | Allocations: 1946)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-02 23:06:38 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"bus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"bus", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bus"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "bus"], ["password_digest", "$2a$12$R1vnUcb.69bK7TamWE8MD.zNg7bCTZkNRVMQnctvAFe7dn/.qlNTi"], ["role", "mover"], ["created_at", "2022-08-02 20:06:38.526469"], ["updated_at", "2022-08-02 20:06:38.526469"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bus"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 328ms (Views: 6.9ms | ActiveRecord: 11.9ms | Allocations: 6163)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:08:48 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:08:48 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Processing by ProfilesController#index as */*
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 22ms (Views: 1.1ms | ActiveRecord: 6.3ms | Allocations: 3421)
+
+
+  [1m[36mProfile Load (2.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 2.4ms | Allocations: 1859)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-02 23:09:59 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"bus", "password"=>"[FILTERED]", "session"=>{"username"=>"bus", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bus"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 285ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 950)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:10:37 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:10:37 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.0ms | Allocations: 1554)
+
+
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 201 Created in 10ms (Views: 1.2ms | ActiveRecord: 4.3ms | Allocations: 1671)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:17:27 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:17:27 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 225ms (Views: 0.8ms | ActiveRecord: 20.4ms | Allocations: 4909)
+
+
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 232ms (Views: 232.1ms | ActiveRecord: 30.2ms | Allocations: 7705)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:17:36 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:17:36 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (15.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 64ms (Views: 49.1ms | ActiveRecord: 15.1ms | Allocations: 1546)
+
+
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 66ms (Views: 1.9ms | ActiveRecord: 17.5ms | Allocations: 1663)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:18:06 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:18:06 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1002)
+
+
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 1755)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:21:13 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:21:13 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 777)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 8ms (Views: 0.8ms | ActiveRecord: 3.7ms | Allocations: 2045)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:24:14 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:24:14 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (30.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 73ms (Views: 0.7ms | ActiveRecord: 30.8ms | Allocations: 1120)
+
+
+  [1m[36mProfile Load (4.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 126ms (Views: 121.3ms | ActiveRecord: 4.1ms | Allocations: 1709)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:25:04 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:25:05 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 1548)
+
+
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 10ms (Views: 0.8ms | ActiveRecord: 5.5ms | Allocations: 1665)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:25:49 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:25:49 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 1395)
+
+
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 8ms (Views: 1.0ms | ActiveRecord: 4.9ms | Allocations: 1673)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:26:24 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 811)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:26:26 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 821)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:26:28 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:26:28 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 3.2ms | Allocations: 1496)
+
+
+  [1m[36mProfile Load (3.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 3.0ms | Allocations: 1679)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:26:33 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:26:33 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 185ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 1509)
+
+
+  [1m[36mProfile Load (108.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 266ms (Views: 157.2ms | ActiveRecord: 108.8ms | Allocations: 1709)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:26:44 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:26:44 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 946)
+
+
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.6ms | Allocations: 1713)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:27:15 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:27:15 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 27ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1538)
+
+
+  [1m[36mProfile Load (5.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 5.1ms | Allocations: 1716)
+
+
+Started GET "/" for ::1 at 2022-08-02 23:27:27 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 18.2ms | Allocations: 294)
+Completed 200 OK in 48ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:27:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:27:33 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 737)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:27:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/profiles" for ::1 at 2022-08-02 23:28:17 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 737)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:28:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:28:19 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:28:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:28:41 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:28:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:29:40 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:29:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:29:56 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:29:56 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 18ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 1152)
+
+
+  [1m[36mProfile Load (3.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 3.2ms | Allocations: 1869)
+
+
+Started GET "/profiles" for ::1 at 2022-08-02 23:30:09 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 733)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:30:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:31:20 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:31:20 +0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (9.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 46ms (Views: 13.6ms | ActiveRecord: 9.9ms | Allocations: 6007)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 201 Created in 58ms (Views: 5.3ms | ActiveRecord: 19.5ms | Allocations: 9916)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:31:23 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:31:23 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 30ms (Views: 0.6ms | ActiveRecord: 4.1ms | Allocations: 1606)
+
+
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 39ms (Views: 38.8ms | ActiveRecord: 0.4ms | Allocations: 1747)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:31:30 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:31:30 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 1.3ms | Allocations: 834)
+
+
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 80ms (Views: 0.7ms | ActiveRecord: 6.4ms | Allocations: 2480)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:32:00 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:32:00 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 52ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1560)
+
+
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 80ms (Views: 79.8ms | ActiveRecord: 0.4ms | Allocations: 1715)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:33:53 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:33:53 +0300
+  [1m[36mUser Load (14.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 90ms (Views: 3.7ms | ActiveRecord: 48.7ms | Allocations: 4380)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (22.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 51ms (Views: 11.2ms | ActiveRecord: 22.9ms | Allocations: 1394)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:34:23 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:34:23 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (2.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 2.9ms | Allocations: 1886)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 54ms (Views: 3.0ms | ActiveRecord: 30.3ms | Allocations: 5172)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:35:33 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:35:33 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 29ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 1599)
+
+
+  [1m[36mProfile Load (20.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 36ms (Views: 14.7ms | ActiveRecord: 20.9ms | Allocations: 1714)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:36:07 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:36:07 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 125ms (Views: 0.9ms | ActiveRecord: 2.7ms | Allocations: 1560)
+
+
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.4ms | Allocations: 1711)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:36:26 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:36:26 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 968)
+
+
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 21ms (Views: 0.8ms | ActiveRecord: 7.3ms | Allocations: 1675)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:36:33 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:36:33 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 39ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 1543)
+
+
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 0.3ms | Allocations: 1715)
+
+
+Started GET "/" for ::1 at 2022-08-02 23:36:53 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.3ms | Allocations: 294)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 2272)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:36:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:37:06 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.2ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:37:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (24.0ms)[0m  [1m[35mTRUNCATE TABLE "users", "profiles"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.1ms)[0m  [1m[35mTRUNCATE TABLE "users", "profiles"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:41:54 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:41:54 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 13ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 1555)
+
+
+  [1m[36mProfile Load (9.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 17ms (Views: 6.8ms | ActiveRecord: 9.3ms | Allocations: 1672)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:42:10 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:42:10 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (4.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 4.5ms | Allocations: 1559)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 11ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1498)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-02 23:42:25 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-02 23:42:25 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 1140)
+
+
+Completed 401 Unauthorized in 21ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 2070)
+
+
+Started GET "/profiles" for ::1 at 2022-08-02 23:42:30 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.9ms | Allocations: 733)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:42:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (12.9ms)[0m  [1m[35mTRUNCATE TABLE "profiles", "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:08 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.3ms | Allocations: 738)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:10 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:10 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:10 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:11 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:11 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:11 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (2.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 2.6ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:11 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (2.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 2.8ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:12 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.1ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:12 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.4ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-02 23:44:12 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.4ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-02 23:44:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  

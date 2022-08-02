@@ -1,11 +1,14 @@
 import React from "react";
-import "../../styles/dashboard.css";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Table from "react-bootstrap/Table";
+import ProfileForm from "./ProfileForm";
+import "../../styles/dashboard.css";
 
 
 const Dashboard = () => {
+ 
+
   return (
     <div className="my-dashboard">
       <Container>
@@ -28,7 +31,7 @@ const Dashboard = () => {
                 </Link>
               </div>
               <div className="links mb-3">
-                <Link to="#">
+                <Link to="">
                   {" "}
                   <i class="ri-lock-line"></i> <span>Create Profile</span>
                 </Link>
@@ -63,8 +66,8 @@ const Dashboard = () => {
             </div>
           </Col>
 
-          <Col lg="9" className="right-col p-5">
-            <div className="dashboard-title">
+          <Col lg="9" className="right-col p-4">
+            <div className="dashboard-title mb-4">
               <h2>Customer Requests</h2>
             </div>
 
@@ -126,6 +129,10 @@ const Dashboard = () => {
                   </tr>
                 </tbody>
               </Table>
+            </div>
+
+            <div className="profileform hidden">
+              <ProfileForm />
             </div>
           </Col>
         </Row>

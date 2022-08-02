@@ -30,8 +30,8 @@
 
 .mover_item-btn a {
   text-decoration: none;
-  color: #e8e8fd;
-  font-weight: 500;
+  color: #e8e8fd !important;
+  font-weight: 600;
 }
 
 .mover_item-btn a:hover {

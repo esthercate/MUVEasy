@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Link } from 'react-router-dom';
 import '../../styles/header.css'
 
-const Header = () => {
+const Header = ({user}) => {
   return (
     <header className="header">
       <div className="header_top">
@@ -20,12 +20,27 @@ const Header = () => {
 
             <Col lg="6" md="6" sm="6">
               <div className="header_top_right d-flex align-items-center justify-content-end gap-3">
-                <Link to="/login" className="d-flex align-items-center gap-1">
-                   Login
+                <Link to="/home" className="d-flex align-items-center gap-1">
+                  Home
                 </Link>
-                <Link to="/register" className="d-flex align-items-center gap-1">
-                   Register
-                </Link>
+                {user ? (
+                  user.username
+                ) : (
+                  <>
+                    <Link
+                      to="/auth"
+                      className="d-flex align-items-center gap-1"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/auth"
+                      className="d-flex align-items-center gap-1"
+                    >
+                      Register
+                    </Link>
+                  </>
+                )}
               </div>
             </Col>
           </Row>

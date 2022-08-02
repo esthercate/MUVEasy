@@ -20,8 +20,6 @@ const Login = () => {
     })
       .then((r) => r.json())
       .then((user) => console.log(user));
-
-
   }
 
   return (

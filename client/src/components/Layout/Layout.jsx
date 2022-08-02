@@ -3,16 +3,16 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Routers from '../../routers/Routers'
 
-const Layout = ({profiles}) => {
+const Layout = ({profiles, user}) => {
   return (
     <>
-        <Header />
-        <div>
-            <Routers profiles={profiles} />
-        </div>
-        <Footer />
+      <Header user={user} />
+      <div>
+        <Routers profiles={profiles} user={user} />
+      </div>
+      <Footer />
     </>
-  )
+  );
 }
 
 export default Layout

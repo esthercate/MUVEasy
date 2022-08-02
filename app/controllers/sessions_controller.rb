@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-    skip_before_action :authorize, only: :create
     
     # login feature
     def create 
@@ -14,15 +13,12 @@ class SessionsController < ApplicationController
 
     # logout feature
     def destroy
-        session.delete :user_id
-        head :no_content
-    end
-
-    private
-
-    def authorize
-        @current_user = User.find_by(id: session[:user_id])
-        render json: { errors: ["Not authorized"] }, status: :unauthorized unless @current_user
+        if User.find_by(id: session[:user_id])
+            session.delete :user_id
+            head :no_content 
+        else
+            render json: { errors: ["Invalid username or password"] }, status: :unauthorized
+        end
     end
 
 end

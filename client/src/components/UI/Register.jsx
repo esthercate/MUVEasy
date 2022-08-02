@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "../../styles/login.css";
 
-const Register = () => {
+const Register = ({onLogin}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -20,9 +20,14 @@ const Register = () => {
         password_confirmation: passwordConfirmation,
         role,
       }),
+    }).then((r) => {
+      console.log(r);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+        Navigate("/moverdashboard")
+      }
     })
-    .then((r) => r.json())
-    .then((user) => console.log(user))
+
   }
 
   return (
