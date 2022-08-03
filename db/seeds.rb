@@ -5,7 +5,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 1,
     price: rand(0..60)
   )
    Profile.create(
@@ -13,7 +12,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 2,
     price: rand(0..60)
   )
    Profile.create(
@@ -21,7 +19,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 3,
     price: rand(0..60)
   )
    Profile.create(
@@ -29,7 +26,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 4,
     price: rand(0..60)
   )
    Profile.create(
@@ -37,7 +33,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 5,
     price: rand(0..60)
   )
    Profile.create(
@@ -45,7 +40,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 6,
     price: rand(0..60)
   )
    Profile.create(
@@ -53,7 +47,6 @@ puts "Seeding profiles......... "
     title: "Home & Office Movers",
     moverName: "cate",
     location: "kasarani",
-    user_id: 7,
     price: rand(0..60)
   )
  

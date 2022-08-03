@@ -6,6 +6,13 @@ function App() {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
+    // fetch user profiles
+    fetch("/profiles")
+      .then((res) => res.json())
+      .then((profile) => console.log(profile));
+  }, []);
+
+  useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user))
@@ -13,12 +20,7 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-    // fetch user profiles
-    fetch("/profiles")
-      .then((res) => res.json())
-      .then((profile) => setProfiles(profile));
-  }, []);
+  
 
 
   return <Layout profiles={profiles} user={user} setUser={setUser} />;

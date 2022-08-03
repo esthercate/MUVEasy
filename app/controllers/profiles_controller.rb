@@ -1,8 +1,7 @@
 class ProfilesController < ApplicationController
 
     def index 
-        profiles = Profile.all
-        render json: profiles
+        render json: Profile.all
     end
 
     def create 
@@ -16,5 +15,4 @@ class ProfilesController < ApplicationController
         params.permit(:imgUrl, :moverName, :title, :price, :location)
     end
     
-
 end
