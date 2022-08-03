@@ -5,8 +5,8 @@ class ProfilesController < ApplicationController
     end
 
     def create 
-        profile = @current_user.profile.create!(profile_params)
-        render json: profile, status: :created
+      profile = Profile.create!(profile_params)
+      render json: profile, status: :created
     end
 
     private 

@@ -34,7 +34,7 @@ const Home = ({profiles}) => {
       <section>
         <Container>
           <Row>
-            {profiles.slice(0, 9).map((profile) => (
+            {profiles.map((profile) => (
               <MoverList profile={profile} key={profile.id} />
             ))}
 

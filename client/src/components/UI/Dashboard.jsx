@@ -13,7 +13,7 @@ const Dashboard = ({ user, setUser }) => {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
-        nav("/")   
+        nav("/home")
       }
     });
   }

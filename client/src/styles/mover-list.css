@@ -21,9 +21,9 @@
 
 .mover_item-btn {
   border-radius: 0;
-  border: none;
-  outline: none;
-  background: #1a194d;
+  border: none !important;
+  outline: none !important;
+  background: #1a194d !important;
   padding: 8px 0px;
   font-weight: 600;
 }
@@ -38,12 +38,12 @@
   color: #fff;
 }
 .mover_btn-details {
-  background: #ee4d38;
-  border-radius: 0px 4px 4px 0px;
+  background: #ee4d38 !important;
+  border-radius: 0px 4px 4px 0px !important;
 }
 
 .mover_btn-transport {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px !important;
 }
 
 .mover_item-content h5 {

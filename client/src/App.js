@@ -9,7 +9,7 @@ function App() {
     // fetch user profiles
     fetch("/profiles")
       .then((res) => res.json())
-      .then((profile) => console.log(profile));
+      .then(setProfiles);
   }, []);
 
   useEffect(() => {
