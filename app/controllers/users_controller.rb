@@ -11,6 +11,11 @@ class UsersController < ApplicationController
         end
     end
 
+    #delete this
+    def index
+        render json: User.all
+    end
+
 
     # stay signed in
     def show 

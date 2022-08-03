@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :profiles, only: [:index]
-  resource :users
+  resources :profiles
+  resource :users # delete this route
 
   post "/signup", to: "users#create"
 

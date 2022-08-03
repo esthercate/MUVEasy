@@ -1,12 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Table from "react-bootstrap/Table";
 import ProfileForm from "./ProfileForm";
 import "../../styles/dashboard.css";
 
 
-const Dashboard = () => {
+const Dashboard = ({ user, setUser }) => {
+  const nav = useNavigate();
+  
+  function handleLogout() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+        nav("/")   
+      }
+    });
+  }
  
 
   return (
@@ -18,8 +28,8 @@ const Dashboard = () => {
             <div className="avatar d-flex">
               <div className="user_image"></div>
               <div className="user_details">
-                <h6>Jane Doe</h6>
-                <p>@doe</p>
+                <h6>{user ? user.username : "Jane Doe"}</h6>
+                <p>@{user ? user.username : "Jane Doe"}</p>
               </div>
             </div>
 
@@ -59,7 +69,7 @@ const Dashboard = () => {
             </div>
 
             <div className="logout">
-              <Link to="#">
+              <Link to="#" onClick={handleLogout}>
                 {" "}
                 <i class="ri-logout-box-r-line"></i> <span>Log out</span>
               </Link>

@@ -24,17 +24,22 @@ const Header = ({user}) => {
                   Home
                 </Link>
                 {user ? (
-                  user.username
+                  <Link
+                    to="/mydashboard"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    {user.username}
+                  </Link>
                 ) : (
                   <>
                     <Link
-                      to="/auth"
+                      to="/login"
                       className="d-flex align-items-center gap-1"
                     >
                       Login
                     </Link>
                     <Link
-                      to="/auth"
+                      to="/Register"
                       className="d-flex align-items-center gap-1"
                     >
                       Register

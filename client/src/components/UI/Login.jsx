@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/login.css";
 
-const Login = () => {
+const Login = ({ onLogin }) => {
+  const nav = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -18,8 +19,15 @@ const Login = () => {
         password,
       }),
     })
-      .then((r) => r.json())
-      .then((user) => console.log(user));
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((user) => {
+            onLogin(user)
+            nav("/mydashboard")
+          })
+        }
+      })
+     
   }
 
   return (

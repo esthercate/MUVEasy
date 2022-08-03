@@ -5,8 +5,6 @@ function App() {
   const [profiles, setProfiles] = useState([]);
   const [user, setUser] = useState(null)
 
-  
-
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
