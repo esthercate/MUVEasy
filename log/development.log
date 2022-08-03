@@ -4520,3 +4520,857 @@ Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 131
 Completed 401 Unauthorized in 23ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2116)
 
 
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 11:08:11 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-03 11:08:11 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (5.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 32ms (Views: 9.3ms | ActiveRecord: 5.6ms | Allocations: 5416)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+Completed 401 Unauthorized in 57ms (Views: 0.6ms | ActiveRecord: 3.5ms | Allocations: 3919)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-03 12:12:17 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"cate", "password"=>"[FILTERED]", "session"=>{"username"=>"cate", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cate"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.19ms)
+Completed 200 OK in 542ms (Views: 12.0ms | ActiveRecord: 107.9ms | Allocations: 6971)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:12:21 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:12:21 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 1.1ms | Allocations: 1459)
+
+
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 145ms (Views: 39.1ms | ActiveRecord: 105.1ms | Allocations: 4925)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:12:51 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:12:51 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 1194)
+
+
+  [1m[36mProfile Load (10.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 10.8ms | Allocations: 1758)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:22:33 +0300
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ProfilesController
+Did you mean?  index):
+  
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:23:54 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:23:54 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 74ms (Views: 1.1ms | ActiveRecord: 19.0ms | Allocations: 6738)
+
+
+  [1m[36mProfile Load (6.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 27.4ms | Allocations: 8314)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:24:08 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:24:08 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.4ms | Allocations: 843)
+
+
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 7.1ms | Allocations: 2050)
+
+
+Started GET "/users" for ::1 at 2022-08-03 12:24:31 +0300
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 23ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 823)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:24:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-03 12:24:39 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:24:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-03 12:24:42 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:24:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:33:59 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"location"=>"Ngara", "profile"=>{"location"=>"Ngara"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 62.7ms | Allocations: 2052)
+
+
+  
+NameError (undefined local variable or method `user' for #<ProfilesController:0x00000000008318>
+Did you mean?  super):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 12:34:27 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.7ms | Allocations: 830)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:34:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:35:12 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"location"=>"Ngara", "profile"=>{"location"=>"Ngara"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2028)
+
+
+  
+NameError (undefined local variable or method `user' for #<ProfilesController:0x00000000008430>
+Did you mean?  super):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:38:03 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:38:03 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+Processing by UsersController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 2.0ms | Allocations: 3370)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 119ms (Views: 3.4ms | ActiveRecord: 11.5ms | Allocations: 7464)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:38:12 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2028)
+
+
+  
+NameError (undefined local variable or method `user' for #<ProfilesController:0x00000000008598>
+Did you mean?  super):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 12:38:41 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 753)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:38:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/profiles" for ::1 at 2022-08-03 12:39:50 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1385)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:39:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:41:42 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 5.3ms | Allocations: 1970)
+
+
+  
+NameError (undefined local variable or method `user' for #<ProfilesController:0x0000000000a3e8>
+Did you mean?  super):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:41:56 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:41:56 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 795)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 94ms (Views: 3.0ms | ActiveRecord: 62.0ms | Allocations: 5852)
+
+
+Started GET "/profiles" for ::1 at 2022-08-03 12:41:58 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 733)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:41:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:47:47 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"Ngara"=>"Ngara", "profile"=>{}}
+Completed 500 Internal Server Error in 5ms (Allocations: 1960)
+
+
+  
+NameError (undefined local variable or method `user' for #<ProfilesController:0x0000000000a5a0>
+Did you mean?  super):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:48:50 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"Ngara"=>"Ngara", "profile"=>{}}
+[31mUnpermitted parameters: :Ngara, :profile[0m
+Completed 422 Unprocessable Entity in 44ms (ActiveRecord: 18.7ms | Allocations: 9767)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Imgurl can't be blank, Title can't be blank, Price can't be blank, Movername can't be blank, Location can't be blank):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:49:02 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:49:02 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 41ms (Views: 3.1ms | ActiveRecord: 2.2ms | Allocations: 4547)
+
+
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 47ms (Views: 31.6ms | ActiveRecord: 14.7ms | Allocations: 7535)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:49:36 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"kasarani"=>"kasarani", "profile"=>{}}
+[31mUnpermitted parameters: :kasarani, :profile[0m
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 0.0ms | Allocations: 2661)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Imgurl can't be blank, Title can't be blank, Price can't be blank, Movername can't be blank, Location can't be blank):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 12:55:57 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 11.3ms | Allocations: 4559)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 12:55:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-08-03 12:56:10 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 12:56:10 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 28ms (Views: 3.4ms | ActiveRecord: 1.6ms | Allocations: 5038)
+
+
+  [1m[36mProfile Load (2.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 50ms (Views: 32.6ms | ActiveRecord: 17.4ms | Allocations: 7549)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 12:56:37 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"Fedha"=>"Fedha", "profile"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 576)
+
+
+  
+NoMethodError (undefined method `profiles' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:12:05 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:12:05 +0300
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 123ms (Views: 4.7ms | ActiveRecord: 65.7ms | Allocations: 7306)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 1417)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:12:36 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"Kasarani"=>"Kasarani", "profile"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 4.3ms | Allocations: 576)
+
+
+  
+NoMethodError (undefined method `Profile' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 13:13:17 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 733)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 13:13:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:14:28 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:14:28 +0300
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 39ms (Views: 3.8ms | ActiveRecord: 12.2ms | Allocations: 4366)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (2.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 2.0ms | Allocations: 1398)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:14:56 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"ngara"=>"ngara", "profile"=>{}}
+[31mUnpermitted parameters: :ngara, :profile[0m
+Completed 422 Unprocessable Entity in 18ms (ActiveRecord: 4.6ms | Allocations: 6516)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Imgurl can't be blank, Title can't be blank, Price can't be blank, Movername can't be blank, Location can't be blank):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:16:05 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:16:05 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.4ms | Allocations: 1853)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 144ms (Views: 2.8ms | ActiveRecord: 28.2ms | Allocations: 7815)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:16:16 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:16:16 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.7ms | Allocations: 1197)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 108ms (Views: 3.1ms | ActiveRecord: 8.6ms | Allocations: 2231)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:17:41 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"vcxdfghjk"=>"vcxdfghjk", "profile"=>{}}
+[31mUnpermitted parameters: :vcxdfghjk, :profile[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.0ms | Allocations: 2658)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Imgurl can't be blank, Title can't be blank, Price can't be blank, Movername can't be blank, Location can't be blank):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 13:28:54 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 10.9ms | Allocations: 3848)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 13:28:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:29:04 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"vcxdfghjk"=>"vcxdfghjk", "profile"=>{}}
+[31mUnpermitted parameters: :vcxdfghjk, :profile[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.0ms | Allocations: 2658)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Imgurl can't be blank, Title can't be blank, Price can't be blank, Movername can't be blank, Location can't be blank):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:29:07 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:29:07 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 1.4ms | Allocations: 1837)
+
+
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 74ms (Views: 41.3ms | ActiveRecord: 32.8ms | Allocations: 4871)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:36:08 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:36:08 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 82ms (Views: 0.9ms | ActiveRecord: 15.3ms | Allocations: 4460)
+
+
+  [1m[36mProfile Load (1.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 121ms (Views: 120.5ms | ActiveRecord: 35.6ms | Allocations: 8743)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:38:00 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:38:00 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 1.0ms | Allocations: 824)
+
+
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 6.8ms | Allocations: 2041)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:38:55 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWn3fsYJYVkDQp9S_izIP3S9zp3Phv5YLqbQ&usqp=CAU", "moverName"=>"catherine", "title"=>"office mover", "price"=>"400", "location"=>"lets", "profile"=>{"imgUrl"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWn3fsYJYVkDQp9S_izIP3S9zp3Phv5YLqbQ&usqp=CAU", "title"=>"office mover", "price"=>"400", "moverName"=>"catherine", "location"=>"lets"}}
+[31mUnpermitted parameter: :profile[0m
+Completed 422 Unprocessable Entity in 10ms (ActiveRecord: 0.0ms | Allocations: 751)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:39:20 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:39:20 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 777)
+
+
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 28ms (Views: 1.7ms | ActiveRecord: 14.2ms | Allocations: 2429)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:40:04 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:40:05 +0300
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 71ms (Views: 6.3ms | ActiveRecord: 27.4ms | Allocations: 4488)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (31.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 72ms (Views: 30.9ms | ActiveRecord: 31.6ms | Allocations: 1399)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:40:41 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWn3fsYJYVkDQp9S_izIP3S9zp3Phv5YLqbQ&usqp=CAU", "moverName"=>"Cateee", "title"=>"Home mover", "price"=>"500", "location"=>"kasarani", "profile"=>{"imgUrl"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWn3fsYJYVkDQp9S_izIP3S9zp3Phv5YLqbQ&usqp=CAU", "title"=>"Home mover", "price"=>"500", "moverName"=>"Cateee", "location"=>"kasarani"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 1.9ms | Allocations: 575)
+
+
+  
+NoMethodError (undefined method `profiles' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 13:42:21 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 13:42:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:45:33 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:45:33 +0300
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 43ms (Views: 4.8ms | ActiveRecord: 11.5ms | Allocations: 4351)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 0.9ms | Allocations: 1398)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:46:09 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"Catee", "title"=>"Mover", "price"=>"300", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"Mover", "price"=>"300", "moverName"=>"Catee", "location"=>"fedha"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.6ms | Allocations: 576)
+
+
+  
+NoMethodError (undefined method `rofiles' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:46:28 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"Catee", "title"=>"Mover", "price"=>"300", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"Mover", "price"=>"300", "moverName"=>"Catee", "location"=>"fedha"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 1.6ms | Allocations: 584)
+
+
+  
+NoMethodError (undefined method `profiles' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:47:22 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"Catee", "title"=>"Mover", "price"=>"300", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"Mover", "price"=>"300", "moverName"=>"Catee", "location"=>"fedha"}}
+[31mUnpermitted parameter: :profile[0m
+Completed 422 Unprocessable Entity in 13ms (ActiveRecord: 4.2ms | Allocations: 4631)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:51:14 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:51:14 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 29ms (Views: 4.5ms | ActiveRecord: 12.4ms | Allocations: 4405)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 1.0ms | Allocations: 1399)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-08-03 13:51:18 +0300
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `destroy'
+Completed 204 No Content in 15ms (ActiveRecord: 4.4ms | Allocations: 3768)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-03 13:51:29 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"cate", "password"=>"[FILTERED]", "session"=>{"username"=>"cate", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cate"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 317ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1206)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-03 13:51:33 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 13:51:33 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 29ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1844)
+
+
+  [1m[36mProfile Load (1.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 93ms (Views: 36.7ms | ActiveRecord: 56.1ms | Allocations: 4869)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:51:59 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"vee", "title"=>"mover", "price"=>"2000", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"mover", "price"=>"2000", "moverName"=>"vee", "location"=>"fedha"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 3.0ms | Allocations: 576)
+
+
+  
+NoMethodError (undefined method `profile' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 13:52:31 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"vee", "title"=>"mover", "price"=>"2000", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"mover", "price"=>"2000", "moverName"=>"vee", "location"=>"fedha"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.1ms | Allocations: 584)
+
+
+  
+NoMethodError (undefined method `profiles' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 14:02:50 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 14:02:50 +0300
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 160ms (Views: 4.5ms | ActiveRecord: 117.1ms | Allocations: 7622)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (7.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 21ms (Views: 9.4ms | ActiveRecord: 7.8ms | Allocations: 1416)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 14:04:29 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"gfddfghjk", "title"=>"kjhgffyui", "price"=>"kjhgffyu", "location"=>"bvcrtyui", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"kjhgffyui", "price"=>"kjhgffyu", "moverName"=>"gfddfghjk", "location"=>"bvcrtyui"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.5ms | Allocations: 575)
+
+
+  
+NoMethodError (undefined method `profile' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 14:09:09 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 14:09:09 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 27ms (Views: 3.3ms | ActiveRecord: 10.0ms | Allocations: 4380)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.91ms)
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 1400)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 14:09:28 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"bee", "title"=>"njiopoig", "price"=>"400", "location"=>"kjhgfdfgio", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"njiopoig", "price"=>"400", "moverName"=>"bee", "location"=>"kjhgfdfgio"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 2.8ms | Allocations: 575)
+
+
+  
+NoMethodError (undefined method `profile' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-03 14:10:30 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 14:10:30 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 1.6ms | Allocations: 2867)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers]   [1m[36mProfile Load (2.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (163.32ms)
+Completed 200 OK in 287ms (Views: 68.2ms | ActiveRecord: 176.5ms | Allocations: 12529)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-03 14:10:44 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "moverName"=>"cate", "title"=>"mover", "price"=>"300", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.oktrucks.com/assets/img/oktrucks_v1/truck.png", "title"=>"mover", "price"=>"300", "moverName"=>"cate", "location"=>"fedha"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+NoMethodError (undefined method `profile' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for ::1 at 2022-08-03 14:11:25 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 732)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-03 14:11:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-08-03 14:12:13 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-03 14:12:13 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (12.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 36ms (Views: 23.4ms | ActiveRecord: 12.8ms | Allocations: 743)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers]   [1m[36mProfile Load (1.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.97ms)
+Completed 200 OK in 63ms (Views: 2.5ms | ActiveRecord: 3.0ms | Allocations: 3269)
+
+

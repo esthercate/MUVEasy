@@ -2,14 +2,32 @@ import React, {useState} from 'react'
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import "../../styles/profileform.css";
 
-const ProfileForm = () => {
+const ProfileForm = ({user}) => {
 
-  const [username, setUsername] = useState("");
+  const [imgUrl, setImgUrl] = useState("");
+  const [moverName, setMoverName] = useState("");
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [location, setLocation] = useState("");
 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
+    fetch("/profiles", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        imgUrl,
+        moverName,
+        title,
+        price,
+        location,
+      }),
+    })
+      .then((r) => r.json())
+      .then((profile) => console.log(profile));
   }
-
 
   return (
     <>
@@ -31,8 +49,8 @@ const ProfileForm = () => {
                 <Form.Control
                   type="text"
                   autoComplete="off"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={imgUrl}
+                  onChange={(e) => setImgUrl(e.target.value)}
                   placeholder="Enter vehicle image"
                 />
               </Form.Group>
@@ -42,8 +60,8 @@ const ProfileForm = () => {
                 <Form.Control
                   type="text"
                   autoComplete="off"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={moverName}
+                  onChange={(e) => setMoverName(e.target.value)}
                   placeholder="Enter your name"
                 />
               </Form.Group>
@@ -53,8 +71,8 @@ const ProfileForm = () => {
                 <Form.Control
                   type="text"
                   autoComplete="off"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                   placeholder="Description"
                 />
               </Form.Group>
@@ -64,8 +82,8 @@ const ProfileForm = () => {
                 <Form.Control
                   type="text"
                   autoComplete="off"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
                   placeholder="e.g. 5,000"
                 />
               </Form.Group>
@@ -75,8 +93,8 @@ const ProfileForm = () => {
                 <Form.Control
                   type="text"
                   autoComplete="off"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
                   placeholder="Enter your location"
                 />
               </Form.Group>

@@ -142,7 +142,7 @@ const Dashboard = ({ user, setUser }) => {
             </div>
 
             <div className="profileform hidden">
-              <ProfileForm />
+              <ProfileForm user={user} />
             </div>
           </Col>
         </Row>

@@ -11,19 +11,13 @@ class UsersController < ApplicationController
         end
     end
 
-    #delete this
-    def index
-        render json: User.all
-    end
-
-
     # stay signed in
     def show 
-        user = User.find_by(id: session[:user_id])
-        if user
-            render json: user, status: :created
+        @current_user = User.find_by(id: session[:user_id])
+        if @current_user
+            render json: @current_user
         else
-            render json: "Not authorised", status: :unauthorized
+            render json: { errors: ["Not authorized"] }, status: :unauthorized unless @current_user
         end
     end
 
