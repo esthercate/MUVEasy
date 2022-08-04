@@ -13,6 +13,31 @@ const MoverList = ({ profile }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
+  const [moving_from, setMoving_from] = useState("");
+  const [moving_to, setMoving_to] = useState("");
+  const [moving_date, setMoving_date] = useState("");
+  const [additional_info, setAdditional_info] = useState("");
+
+  function handleSubmitRequest(e) {
+    e.preventDefault();
+    fetch("/requests", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        moving_from,
+        moving_to,
+        moving_date,
+        additional_info,
+      }),
+    })
+      .then((r) => r.json())
+      .then((data) => console.log(data));
+
+  }
+
   return (
     <Col lg="4" md="4" sm="6" className="mb-5">
       <div className="mover_item px-5 py-4">
@@ -56,13 +81,19 @@ const MoverList = ({ profile }) => {
               <Modal.Title>Request for Transport</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form>
+              <Form onSubmit={handleSubmitRequest}>
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlInput1"
                 >
                   <Form.Label>Moving From</Form.Label>
-                  <Form.Control type="text" placeholder="ruiru" autoFocus />
+                  <Form.Control
+                    type="text"
+                    placeholder="ruiru"
+                    value={moving_from}
+                    onChange={(e) => setMoving_from(e.target.value)}
+                    autoFocus
+                  />
                 </Form.Group>
 
                 <Form.Group
@@ -70,7 +101,13 @@ const MoverList = ({ profile }) => {
                   controlId="exampleForm.ControlInput1"
                 >
                   <Form.Label>Moving To</Form.Label>
-                  <Form.Control type="text" placeholder="kilimani" autoFocus />
+                  <Form.Control
+                    type="text"
+                    placeholder="kilimani"
+                    value={moving_to}
+                    onChange={(e) => setMoving_to(e.target.value)}
+                    autoFocus
+                  />
                 </Form.Group>
 
                 <Form.Group
@@ -78,7 +115,13 @@ const MoverList = ({ profile }) => {
                   controlId="exampleForm.ControlInput1"
                 >
                   <Form.Label>Date</Form.Label>
-                  <Form.Control type="date" placeholder="Date" autoFocus />
+                  <Form.Control
+                    type="date"
+                    placeholder="Date"
+                    value={moving_date}
+                    onChange={(e) => setMoving_date(e.target.value)}
+                    autoFocus
+                  />
                 </Form.Group>
 
                 <Form.Group
@@ -86,16 +129,21 @@ const MoverList = ({ profile }) => {
                   controlId="exampleForm.ControlTextarea1"
                 >
                   <Form.Label>Additional Information</Form.Label>
-                  <Form.Control as="textarea" rows={3} />
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    value={additional_info}
+                    onChange={(e) => setAdditional_info(e.target.value)}
+                  />
                 </Form.Group>
+                <Button variant="primary" type="submit" onClick={handleClose}>
+                  Submit Request
+                </Button>
               </Form>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
                 Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
               </Button>
             </Modal.Footer>
           </Modal>
