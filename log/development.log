@@ -12224,3 +12224,1294 @@ Processing by RequestsController#create as */*
 Completed 201 Created in 87ms (Views: 8.9ms | ActiveRecord: 49.6ms | Allocations: 10344)
 
 
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:38:46 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 11:38:46 +0300
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.16ms)
+Completed 200 OK in 50ms (Views: 36.4ms | ActiveRecord: 7.6ms | Allocations: 7278)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.33ms)
+Completed 201 Created in 47ms (Views: 17.0ms | ActiveRecord: 9.8ms | Allocations: 7153)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:38:50 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 11:38:50 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.4ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 3.9ms | Allocations: 7083)
+
+
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.75ms)
+Completed 201 Created in 142ms (Views: 3.5ms | ActiveRecord: 100.3ms | Allocations: 10964)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:39:01 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 11:39:01 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mProfile Load (5.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+[active_model_serializers]   [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.09ms)
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 200 OK in 98ms (Views: 91.5ms | ActiveRecord: 5.7ms | Allocations: 4343)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.98ms)
+Completed 201 Created in 85ms (Views: 8.6ms | ActiveRecord: 2.1ms | Allocations: 4279)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:39:44 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 11:39:44 +0300
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.76ms)
+Completed 200 OK in 90ms (Views: 53.2ms | ActiveRecord: 34.0ms | Allocations: 9046)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.25ms)
+Completed 201 Created in 42ms (Views: 12.6ms | ActiveRecord: 10.7ms | Allocations: 7185)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:42:13 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-04 11:42:13 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (9.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.21ms)
+Completed 200 OK in 97ms (Views: 65.7ms | ActiveRecord: 28.6ms | Allocations: 10138)
+
+
+  [1m[36mUser Load (28.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 201 Created in 94ms (Views: 6.2ms | ActiveRecord: 47.7ms | Allocations: 13335)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:42:17 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.32ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 2955)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 11:44:04 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"Kamau", "title"=>"Office Movers", "price"=>"2000", "location"=>"Ngong Road", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Office Movers", "price"=>"2000", "moverName"=>"Kamau", "location"=>"Ngong Road"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 1797)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 11:44:45 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 11:44:45 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.73ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 1.5ms | Allocations: 3782)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (1.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.02ms)
+Completed 201 Created in 30ms (Views: 4.4ms | ActiveRecord: 3.6ms | Allocations: 4751)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 11:45:33 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"Njuguna", "title"=>"Homme movers", "price"=>"2000", "location"=>"Buruburu", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Homme movers", "price"=>"2000", "moverName"=>"Njuguna", "location"=>"Buruburu"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (8.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 8.9ms | Allocations: 1780)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 11:45:39 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"Njuguna", "title"=>"Homme movers", "price"=>"2000", "location"=>"Buruburu", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Homme movers", "price"=>"2000", "moverName"=>"Njuguna", "location"=>"Buruburu"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 1780)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 11:46:58 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"Njuguna", "title"=>"Homme movers", "price"=>"2000", "location"=>"Buruburu", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Homme movers", "price"=>"2000", "moverName"=>"Njuguna", "location"=>"Buruburu"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 5.1ms | Allocations: 6419)
+
+
+  
+NoMethodError (undefined method `profiles' for #<User:0x00007f7def38a5f8>
+Did you mean?  profile
+               profile=):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 11:48:53 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"Njuguna", "title"=>"Homme movers", "price"=>"2000", "location"=>"Buruburu", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Homme movers", "price"=>"2000", "moverName"=>"Njuguna", "location"=>"Buruburu"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 5.6ms | Allocations: 5601)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:31:39 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:31:39 +0300
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.52ms)
+Completed 201 Created in 156ms (Views: 14.1ms | ActiveRecord: 110.1ms | Allocations: 9984)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.44ms)
+Completed 200 OK in 59ms (Views: 44.1ms | ActiveRecord: 12.0ms | Allocations: 8961)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:32:35 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"Kate", "title"=>"Home moving", "price"=>"200", "location"=>"fedha", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Home moving", "price"=>"200", "moverName"=>"Kate", "location"=>"fedha"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 8.3ms | Allocations: 4616)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:34:51 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:34:51 +0300
+Processing by ProfilesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (3.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.66ms)
+Completed 200 OK in 36ms (Views: 22.4ms | ActiveRecord: 6.6ms | Allocations: 10098)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (15.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.54ms)
+Completed 201 Created in 101ms (Views: 9.3ms | ActiveRecord: 61.9ms | Allocations: 17442)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:35:31 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"hjkdjhgyui", "title"=>"kjhgfrtyuio", "price"=>"2000", "location"=>"jhiuyg", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"kjhgfrtyuio", "price"=>"2000", "moverName"=>"hjkdjhgyui", "location"=>"jhiuyg"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (21.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 22.3ms | Allocations: 1790)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:40:49 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:40:49 +0300
+Completed 500 Internal Server Error in 6ms (Allocations: 171)
+
+
+  
+SyntaxError (/Users/esther/Public/Projects/MUVEasy/app/models/user.rb:8: syntax error, unexpected ':', expecting `end'
+allow_destroy: true
+             ^
+):
+  
+app/models/user.rb:8: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:8: syntax error, unexpected ':', expecting `end'
+app/controllers/users_controller.rb:17:in `show'
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (9.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 27.0ms | Allocations: 9037)
+
+
+  
+SyntaxError (/Users/esther/Public/Projects/MUVEasy/app/models/user.rb:8: syntax error, unexpected ':', expecting `end'
+allow_destroy: true
+             ^
+):
+  
+app/models/user.rb:8: syntax error, unexpected ':', expecting `end'
+app/models/user.rb:8: syntax error, unexpected ':', expecting `end'
+app/controllers/profiles_controller.rb:4:in `index'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:41:08 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:41:08 +0300
+  [1m[36mProfile Load (9.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.87ms)
+Completed 200 OK in 166ms (Views: 123.8ms | ActiveRecord: 26.3ms | Allocations: 9096)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.12ms)
+Completed 201 Created in 32ms (Views: 10.0ms | ActiveRecord: 6.1ms | Allocations: 7293)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:41:40 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"fhjkjhgf", "title"=>"rtyuytr", "price"=>"344", "location"=>"rtyukjhg", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"rtyuytr", "price"=>"344", "moverName"=>"fhjkjhgf", "location"=>"rtyukjhg"}}
+  [1m[36mUser Load (47.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Load (16.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:9:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 64.3ms | Allocations: 1793)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:9:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:45:11 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:45:11 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.73ms)
+Completed 201 Created in 69ms (Views: 7.0ms | ActiveRecord: 10.0ms | Allocations: 11079)
+
+
+  [1m[36mProfile Load (1.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.82ms)
+Completed 200 OK in 136ms (Views: 91.5ms | ActiveRecord: 39.4ms | Allocations: 17135)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:46:01 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "moverName"=>"cate", "title"=>"Home relocator", "price"=>"2440", "location"=>"Fedha", "profile"=>{"imgUrl"=>"https://www.enterprisetrucks.com/content/dam/truckrental/en_us/carouselimageswithouttext/vehicles/straight-trucks/DBOX_21_16'%20Cabover%20AngularFront_US%20ENG.png", "title"=>"Home relocator", "price"=>"2440", "moverName"=>"cate", "location"=>"Fedha"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:11:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.2ms | Allocations: 1822)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:49:58 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:49:58 +0300
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.71ms)
+Completed 200 OK in 72ms (Views: 53.3ms | ActiveRecord: 16.5ms | Allocations: 9042)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.06ms)
+Completed 201 Created in 33ms (Views: 8.5ms | ActiveRecord: 9.4ms | Allocations: 7197)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:50:07 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mProfile Load (8.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:11:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 12.1ms | Allocations: 1781)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:58:27 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:58:27 +0300
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.95ms)
+Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 18.8ms | Allocations: 11945)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.89ms)
+Completed 201 Created in 72ms (Views: 13.4ms | ActiveRecord: 39.6ms | Allocations: 7260)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:58:32 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mProfile Load (162.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:11:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 167.0ms | Allocations: 1787)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 12:59:21 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 12:59:22 +0300
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.5ms)
+Completed 201 Created in 117ms (Views: 15.0ms | ActiveRecord: 8.9ms | Allocations: 7247)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.95ms)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 4.2ms | Allocations: 9011)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 12:59:24 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mProfile Load (4.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:11:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 67.3ms | Allocations: 4611)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:12:55 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:12:55 +0300
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (21.69ms)
+Completed 201 Created in 100ms (Views: 23.8ms | ActiveRecord: 15.7ms | Allocations: 9895)
+
+
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (13.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.85ms)
+Completed 200 OK in 102ms (Views: 67.4ms | ActiveRecord: 31.3ms | Allocations: 9033)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:12:59 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:12:59 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.56ms)
+Completed 201 Created in 123ms (Views: 5.8ms | ActiveRecord: 29.0ms | Allocations: 5948)
+
+
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.68ms)
+Completed 200 OK in 166ms (Views: 144.6ms | ActiveRecord: 21.5ms | Allocations: 11276)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:13:09 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:13:09 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.75ms)
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms | Allocations: 3462)
+
+
+[active_model_serializers]   [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.84ms)
+Completed 201 Created in 23ms (Views: 6.8ms | ActiveRecord: 8.6ms | Allocations: 5186)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:13:19 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:13:19 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.7ms)
+Completed 200 OK in 70ms (Views: 50.3ms | ActiveRecord: 16.7ms | Allocations: 9082)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (38.5ms)
+Completed 201 Created in 84ms (Views: 21.1ms | ActiveRecord: 41.5ms | Allocations: 7201)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:13:25 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:11:in `create'
+[31mUnpermitted parameter: :profile[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.8ms | Allocations: 1793)
+
+
+  
+NoMethodError (undefined method `create!' for nil:NilClass):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:19:59 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:19:59 +0300
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.75ms)
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 26.7ms | Allocations: 11722)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7def3042c8>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (4.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.48ms)
+Completed 200 OK in 77ms (Views: 48.6ms | ActiveRecord: 25.9ms | Allocations: 9363)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:20:03 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 17.7ms | Allocations: 5446)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7df01afbb0>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:20:15 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:20:16 +0300
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (30.97ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 92.7ms | Allocations: 8272)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7decdaddf8>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.44ms)
+Completed 200 OK in 68ms (Views: 50.3ms | ActiveRecord: 13.9ms | Allocations: 9323)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:20:17 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+[31mUnpermitted parameter: :profile[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 42ms (Views: 0.7ms | ActiveRecord: 22.1ms | Allocations: 8291)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:20:33 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+[31mUnpermitted parameter: :profile[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 50ms (Views: 0.7ms | ActiveRecord: 21.2ms | Allocations: 12590)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:20:35 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+[31mUnpermitted parameter: :profile[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 5162)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:20:35 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+[31mUnpermitted parameter: :profile[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 18ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 5162)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:20:48 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"", "moverName"=>"", "title"=>"", "price"=>"", "location"=>"", "profile"=>{"imgUrl"=>"", "title"=>"", "price"=>"", "moverName"=>"", "location"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+[31mUnpermitted parameter: :profile[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 14ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 5167)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:22:05 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.67ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.6ms | Allocations: 5010)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:22:05 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.24ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 4239)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7decff1f10>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started POST "/login" for 127.0.0.1 at 2022-08-04 13:22:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Cate", "password"=>"[FILTERED]", "session"=>{"username"=>"Cate", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Cate"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.18ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 0.4ms | Allocations: 4050)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7df0276418>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:22:44 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Cate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"Cate", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Cate"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 299ms (ActiveRecord: 3.1ms | Allocations: 2650)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:22:48 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Cate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"Cate", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Cate"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 291ms (ActiveRecord: 1.0ms | Allocations: 2428)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:22:55 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:22:55 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.99ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.5ms | Allocations: 4163)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.08ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 14.1ms | Allocations: 10245)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7def362a80>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:23:14 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Nate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"Nate", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nate"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Nate"], ["password_digest", "$2a$12$cNLYbWPBmaBxICytK0ZKIeWrD0RZBk8YA3tKTxquLsG2ryS.Cmbx6"], ["role", "mover"], ["created_at", "2022-08-04 10:23:14.756824"], ["updated_at", "2022-08-04 10:23:14.756824"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Nate"], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.26ms)
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 7.2ms | Allocations: 6759)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7decd627e0>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:23:15 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Nate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"Nate", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nate"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 291ms (ActiveRecord: 1.2ms | Allocations: 2426)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:23:37 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:23:37 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (85.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.9ms)
+Completed 200 OK in 93ms (Views: 7.9ms | ActiveRecord: 85.0ms | Allocations: 3854)
+
+
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.93ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 3.2ms | Allocations: 7030)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7decf21f90>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:23:47 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (1.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.7ms | Allocations: 3037)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:23:47 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.55ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 3907)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7df018ec30>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started POST "/login" for 127.0.0.1 at 2022-08-04 13:23:58 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Cate", "password"=>"[FILTERED]", "session"=>{"username"=>"Cate", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Cate"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.34ms)
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 1.9ms | Allocations: 3942)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7de9f49908>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:24:10 +0300
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:24:10 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.39ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms | Allocations: 4245)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7df0123908>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+  [1m[36mProfile Load (110.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.36ms)
+Completed 200 OK in 127ms (Views: 16.8ms | ActiveRecord: 110.0ms | Allocations: 34844)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:25:12 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Baby", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"mover", "user"=>{"username"=>"Baby", "role"=>"mover"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Baby"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Baby"], ["password_digest", "$2a$12$bHEsatCQJXkdxubPVNsX4ODv4/mmDav3FlwnEUjgflbBBzjeH6o0e"], ["role", "mover"], ["created_at", "2022-08-04 10:25:12.480621"], ["updated_at", "2022-08-04 10:25:12.480621"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Baby"], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.47ms)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 5.3ms | Allocations: 6685)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7df030d020>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:25:49 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:25:49 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.69ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms | Allocations: 3940)
+
+
+  [1m[36mProfile Load (10.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:6:in `index'
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7df002f088>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.73ms)
+Completed 200 OK in 50ms (Views: 39.7ms | ActiveRecord: 10.0ms | Allocations: 8824)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:25:51 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"", "user"=>{"username"=>"", "role"=>""}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 7.9ms | Allocations: 2894)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Username can't be blank):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:26:11 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Kate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"Kate", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Kate"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Kate"], ["password_digest", "$2a$12$AkWYDhZlm9YidFCGBG7Cq.BeXDN/mKUmtPgwRBuGe9x0Zi2HIoIby"], ["role", "user"], ["created_at", "2022-08-04 10:26:11.338191"], ["updated_at", "2022-08-04 10:26:11.338191"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (5.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Kate"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.3ms)
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 9.8ms | Allocations: 6683)
+
+
+  
+NoMethodError (undefined method `profile' for #<User:0x00007f7def3209a0>
+Did you mean?  profiles
+               profiles=):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2022-08-04 13:30:12 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Kate", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user", "user"=>{"username"=>"Kate", "role"=>"user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Kate"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 366ms (ActiveRecord: 50.9ms | Allocations: 4748)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Username has already been taken):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:31:19 +0300
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:31:19 +0300
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mProfile Load (3.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (32.78ms)
+Completed 201 Created in 80ms (Views: 6.1ms | ActiveRecord: 28.6ms | Allocations: 5893)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.63ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 17.9ms | Allocations: 11805)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7def43ac28>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:31:30 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:31:30 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.46ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 5520)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7def112780>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (2.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.31ms)
+Completed 201 Created in 179ms (Views: 3.2ms | ActiveRecord: 3.6ms | Allocations: 30832)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:31:57 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:31:57 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.08ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.4ms | Allocations: 5597)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7def341538>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (3.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.48ms)
+Completed 201 Created in 206ms (Views: 2.8ms | ActiveRecord: 3.5ms | Allocations: 20012)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:32:11 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:32:12 +0300
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.15ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 24.5ms | Allocations: 9382)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7df0108db0>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.29ms)
+Completed 201 Created in 48ms (Views: 16.8ms | ActiveRecord: 9.8ms | Allocations: 7054)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:32:27 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.03ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 11.1ms | Allocations: 8266)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7df008dfc0>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:32:27 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.07ms)
+Completed 201 Created in 12ms (Views: 9.2ms | ActiveRecord: 0.9ms | Allocations: 1699)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:32:45 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:32:45 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.64ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.5ms | Allocations: 5597)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7def372340>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.79ms)
+Completed 201 Created in 176ms (Views: 2.9ms | ActiveRecord: 24.2ms | Allocations: 42740)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:35:08 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:35:08 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mProfile Load (14.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.47ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 14.4ms | Allocations: 6294)
+
+
+  
+NoMethodError (undefined method `user' for #<Profile:0x00007f7def488c48>
+Did you mean?  user_id):
+  
+app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mProfile Load (136.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (140.3ms)
+Completed 201 Created in 153ms (Views: 5.6ms | ActiveRecord: 138.2ms | Allocations: 23905)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:36:44 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:36:44 +0300
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.44ms)
+Completed 200 OK in 99ms (Views: 30.1ms | ActiveRecord: 64.1ms | Allocations: 7106)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.37ms)
+Completed 201 Created in 38ms (Views: 9.2ms | ActiveRecord: 11.4ms | Allocations: 6990)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:36:53 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:36:53 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (7.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.53ms)
+Completed 201 Created in 76ms (Views: 5.7ms | ActiveRecord: 8.2ms | Allocations: 2687)
+
+
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.07ms)
+Completed 200 OK in 86ms (Views: 76.7ms | ActiveRecord: 8.5ms | Allocations: 7789)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2022-08-04 13:37:42 +0300
+Processing by ProfilesController#create as */*
+  Parameters: {"imgUrl"=>"data:image/jpeg;base64,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", "moverName"=>"Peter", "title"=>"Office Movers", "price"=>"5000", "location"=>"Ngong road", "profile"=>{"imgUrl"=>"data:image/jpeg;base64,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", "title"=>"Office Movers", "price"=>"5000", "moverName"=>"Peter", "location"=>"Ngong road"}}
+[31mUnpermitted parameter: :profile[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mProfile Create (7.9ms)[0m  [1m[32mINSERT INTO "profiles" ("imgUrl", "title", "price", "moverName", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["imgUrl", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBcVFBUYGBcYGhkaGRkZGRkZGhcZGhkgGhkYFxoaICwjGh0pIBkaJDYkKS0vMzMzGSI4PjgyPSwyMy8BCwsLDw4PHhISHjIpIikyNDIyMjIyLzIyMjIyMjIyMjIyMjIyLzIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjMyMv/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMEBQYHAQj/xABIEAACAQIEAgYFCAcHBAIDAAABAhEAAwQSITEFQQYTIlFhcTKBkaGxByNCUnLB0fAzYnOCkrLhFCRTk6LC0jRDY+IWgxXD8f/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwAEBQb/xAAsEQACAgEDAgUEAgMBAAAAAAAAAQIRAxIhMQRBIjJCUWEFE4GRcdEzwfAU/9oADAMBAAIRAxEAPwCNbvq1y46nOWVurQiFVhu2pyiQJmofBcSih7dxAELC4gIYuhcgRvOSQZGnpeUTeH4q25a62XtIcqSMxBghl211Go8TpUPFojKtwwHtMo1By5ScpzwJY7MPEAV5qh4qX79hZpLguVv3LdjK1xOruGAoGwMEBCBtuDrrNUXFMGLTi4DnzmerWOyN437++ta/R3FPbU27ltZ0cXBNp03VkDDOjAn6O435VZYXoZa6sI5e52szFexnaNS1zcg92kcoroWKVNPd3XtsJTswYx7XVt9Y5NwEBlCQXOYkLAOy+iBGk1a2eiWKuOWKKiNzunKdDuV9KTE6CNa6VhuGWrRLKlu0W3ZQM7ebt2j76ezoPRXMe9j+I+6qxwpchUdzMJ0et27YNy8eySAyrkUZly5dZzCJ7qOrsC2SXZbTAMZGVX000WAT4Va9Irdy7hbiq0MWt5Y7I/SLMnU7TVbh+itli2sQyMoInIQHHY+qDm1HeF7qokorZBat7lVib7G2cls9UIyoDGaWgG5vzIMVY4RmCDOFDcwpJA9Z3pvF8KZcXhbK3mYEXrrahBltqEAbIokFrynWfRq6PBW5Mn8R/wCNI2OkkV+ak5qnLwS6D+ktkdwDA+0mPdXp4Pc8D5Efeaw6ZAd6SblS73B70dlQT3FlA9on4U0ODX41Qepp98CsaxvrKbzCTAEnfx7pqQ3DLv1D7D+FNpg7obW1cPjAj4z7qAyoctLFKcTvO4OhI215cvCvepcbo3spLyBJVvYT8Kwr3FTSW13pC3Ae/wBYI9xFelvzBrAPUECCSfExJ840rxqbF5ZjMJFBcd49tEBEYkMddJ00/M0nPB05+40nFXVDTmHt51HfBXLiC+t5Utpdt23WVDEsygiSOyxzrAOuopluBk60zMwVAWYg6DfwgbRvvUr/AOJ3btxHu3QttVkIoDEtPPMMogRrrqfDXSW7Fu0UCAACZjUnTcnc1IDkBMons/hTqImoj4S3atyiJlCgnfvMn2kk0viuLZEzLp2WO3cJG9RQjnOZgxr46jSnuL4V3thVEnIw5bldN/GmpWLbp0ZU8WuO4zOSGI0zaDXuGlb22dBFY3DdFrpylyixEiSTv4aVr86oACwEd5rTrsbGpLkeqJxMfM3PsN8DXpxi8pPkp8ee3I1DxXGVtuFZWAKM86EAKYMgGfZQpjuSOZX+E37hQJauN4hDA25nSrXov0SxVrFW7z2wiqzEy6loIIkBZ7xppWjx3TWzb2VmPKB/yIqBgembXr9u0tvKruFJzCYPcI09tMtVCvTZE6SdG8RdxNy4lqVYiDmAmFA7/CildIOPXrWIuW1c5VIjU81B7/GihbDSI3Cegtu2+c3XfUnKiqiGe9mBPsArWYPhVqyOyqW53I7Tt5u0sTpUjrGPOPAfjvSKkoxjwhqbHgUGoGY95/r+FDX2POB4U3RRsNCaVRRWGGsaPmX80/nWvcEoMkoG23jT2kV7if0TjxT+daa4WZXy03I205Gi/KS9ZX2Ez8SunJpZw1pBBAhrtx3bXN9W3b08qv8Aqx9R/wCM/c9UPRtM9zG3YnPiWQds+jZtpaj0vrrcq/yeB/iH3mpMoAQfVf2ufxrzIO657GPxWlBfP+JaRdvqglmIHmv4VrMe5R33B+7+KUCPrv6wv4VHPEbf+Iff/wAarMT0swtt8jX4aYjUkecDs+ug5INF5mH+J8Pxo6z/AMg9n/tVeuPe4oa0ZU7MToR4Qa9tJdYDNcjTkNfaaGr2NROfEQJNwfwn/lTNziQX6a+/7pqO/DlOrEse8mpNrCouyqPUKFyNSIt3idxtESdtTpz21WPfXpN59wi+qT76msg7qUBRp9zFY/Dc2rmT5ADWnbfDrYjs7ev41NakzRpGspeOYdQEIUAhjrA+qar7GDBFiyCSL2NN5wY7K2bIfTw6xLX8VWnGj2U8Wj2iKr+jaC5jGY6rYsKBO2fEPLDzC4dP4qrDgm27NeEQEEESJ21pYcaQrGBG0fGKUooj7qcA0s8lUTvJn3f1ohjEtG3ogD4zTgFHd6qJqGOpB9IsfNj9Xu2pS21EwAPIeVOD8/w0fn4UAUNlfz6mqg6SL2x+yufzitD/AF/3VR8ct57ioCAWt3BLGAO0NSaaPIsuDm3E27S+ZqV0Z/6yx+0Wr3FdGbBKm5jEGXkgDH4/dU3g3CcFbvWzba9ccMCpKwoPeeyNKKktJq3KXpaP75d81/kWir/jlzD9fcz4O5caRLhoDdkbdr1eqilsf8l7RRRUyoUUUVjBRRRWMJvCbbDxX+YVCwFwI7qxAG4kTU24Oy3kP5hVbiXKpdYekLT5Rzn6PvIoy8hL1lTw7jFrB4Sz1jB3usz6IdXv3GuanLpHWARuYgTWiTiDMNLY120jl4rSbuFQKq5QQsAadw0+FTkURXPbbLURrZunko/PcNKRcwGYyzE+A29lT1FeMK1AKviGEVLV1lEFbblSTsQpjeuT8M6LM+dmcrvH2p3PfXYOKXFFtw0dpSIPOdNu7WsFi71tlIk9kxCkgyDrsRrU5yp0jqwwTVst/k8weItLdt3Cpt6FYJMMd4BGgI+FbYVU9HsL1dkHtS/bOYkkTsNfD41aA1WPBDJWp0emgV5NeE1hAdgN6g2eM4Z3FtL9pnMkItxGYxvCgzpWJ+UXAYjEXrVrrBbw2XMwUnM75oOZdiAIiTGprL3+jFyzdtXMKdFZWUliDmTtHMRsDHxo2vcdY5NWdrJptjTdi8HRXGzKGHkRI+NesaAhW8abS3+0Ue+mPk8E28Rc/wAS+8fZtAWR6ptMf3qOP3QiK52Vwx8hr91WPRK1ks5PqhAfEx2j6zJ9dWhwTl5i9o/pRR/SnCeDl6q8/pXo5eqvD+FYx4Pz7KRduqqlmICqCSSYAAjU0v8AP+mqjpPgrl6w1u0FzMR6RyiJWdYNFCvgsrVwMuZSCDJBBkEQ21UnSJQXE7dVdn+IVCwa3cFkR7nWWmgQRBtnKxYKRuJJPqqfxtC9xVXVmt3AB39oU+mtyeq1RQYXiNi3Eg+YA++rLh3Fbb3UVVM5l3j7qqx0QxLRKous9px/tmrLhXR02ryO161IYHKDJMHYTGtS1MfQkI45iAL9wEbEd/1RRUnjHC7T3nZr4UmJEbaDxoramNpRbUUUUpQKKKKxgooorGG8Ss27g/VqhtYUI+WTmuNbEGDotxXb/SjVdcQ/Q3Y/w2+Fcv8Ak7cf2oSdcrt35mMLqfIsaZrwk/UdUvbVIQ1EvnSpCGubuVHZql6ScfTCoJ1uMDkXkI3Zv1R7/eLea5R8oRc4xhJIyJHguXb+Isf3qzO36f08M2ZRlwlf8lTi+M3usN/rXY/SV+0ApP0AIhQfo8uW1WHDeJJ1guPYVz+0YK+0SBufOaziXSpg8++CI5iD8KseBYN1zQHe3spCkjkTBA8APUaVraz6HL0+BSSa8L25qmdf4Hxu3ikLICpUwytErOx03Bg6+B7qtJrnPQYPbxbKVcJcQjVSAWU5l3GhjNz3866JNOuD5rqsUMeWUYcfsVNJJoJpJNY5ig6Y4UNaFwhj1UlgvNGENI8DlM8oPjWUwXFLahU28zJnvJ8jXR7igggiQRBB2IOhBrhvGzZN9xh0KWxKCXdy8Ey5LkkT3DkBStbnf0WGWd6V27nVejXG7N5DbR5ZCdNiUzaMs7qJAny7xNyxrg+CDWnFyy723XUMrH2EHRh3g712Do9xcYqwtwwHHZuKOTgax+qRBHgaYfrvp8+n8VeF/N7jXSbW2ijdrtsDuMHMQfDKpq66NMxW5m71+BrLdMOI9UFI1KhmUfr6BCfCM49dO/JRxm7ibd5rpEqyRlXKIIY/cKtDg8eXmN9R/SiinGPBy9VB/Cj+leE/d99EU8/D/bR+feK95er/AG15+feKwCt4zgzctELuO0PEhG099V3EQwNo6qws3BvBBledaEber/aapePemP2d3+YUyltQjj3MVjMWzMFeSZiSxPxqy4CPn7f21qvucNvu+ZbN0jNPoN+FXnBuE31uo7W2VQykkwIHPQmoIqx3jg+fueY/lFFTuLcMuPdZlWQYjb6oHfRTgosKKKKUqFFFFYwUUUUDHothwyHZgQfI6VzfoZhltcRu2kMqqXlBJkkLctRJAHwroGLHzd39ncEea1zD5OEAxbRt1Vw+1rR+JNF+QT1HTbx0NPoaj3z2TTitXOVHwazXFf07RpIX19kDWtEGrM9J8JcVjfWMgUZ9YKxzg7iIpZq0UxSqRznpliw2IAAgogDGIJYme7XSNfOoVjGXhbVUuuggnstl3M8iJ3NbTEpZxCBby5o2YaMPJhy8Nqhr0Vtekt1wsHskKTp+vsBtrHOqYpRXmOvqMjyYlCPYr+DYq4t+05vXGAaTnJKGJP1zOo35eNdjsX1dQykEET5eBriGAwbtfa1at3c9sO7LcKSROsRH1hFXeEx+LWVTPaI+sComYAkjck1pvxbHGoLTXezq5NJJrB4DpNjkfLesB1PNXSY8NdavsZ0hUAdWssRrm2Xwgbml1IzxyRJ6QcRazaYooa4QRbWRv9YyRoN/GuL9SUOVgQRvOh866BiMUzk3Lhn7hyAA2rDcZ451zZEX5tTqxHab7PcPeayuT2PV+n9THppaZLl8jaGdtq0/QXGG3izbJ0u2zH27ZzD/AEF/ZWVsaaH+h8qsuH3wmJw7yBlu2wSeQdgjf6WNGLPf+ow+70cvdK/0b3pjZVsM7FQWVWyk7jsNVT8iuKUJdtwczZWG0Qkgzrv2hV10q/6a55H4EVlvkhTNbxBXR1NrKfBs2Ye4VbHwfBz2OyBqS1wDcis5/Z7p3en8bwxclveYMnvOlUJ6i3bGWxu68uYpo8Qt6dscu8/AVRpw5fE//wAqxx2CU27YC7L9w3omUrJB4la+tPq8I50DiIOqqxHfAjfz8KrrOEXu5Vf4RAEURyrPYMXZBGKblb9/hHce+ouMvsp61kXsK0AydyCfhWgqn6RWvmbjD6hn2aGhYXEz1zplc+jbX2/0owPSm9cvW7bBQruqmN9TGhrLLv6qn8IX+8WP2qfGp2MariuOuJdZVcwIjU81B7/Gik8XT55/V/KKKcGosqKKKUoFFFFYwUUUUDDOL/R3PsP/ACmuX/Jsf7y5/wDE/wAbVdSvjsP9lvga5T8mzf3h/wBk/wAbVM/IJ6jpl89k1TcYx1xLgVHIGUHSN5POPCpmK4jbWVa4gb6pZQ2u2kzVHxfFJccMjqwygEqQQDJ0Mc9a4cj2OvHB3uhDY64d7j/xGqDpDiyltyQzkwIEnzJOsCKtFNUnSUkoqjm6j3N+FTxq5opk2i6MThb7Z3KswEzAJ5k91bPovj3dDazap2wdzBO0yCCDz1ENBBrJWSiEggsSSTsIHLXXmdo+NXnRnFAYnKAFVkYeJ+kNQxGyHkK9CfkZzY5NSRsHMR7DGk6/1Om1NDEQ4kCNp1Jn4DyEnyp11/P5NNtbB/PxriXydViMTjBPZIPwH40wLrHnXt+wOX599IsD8/nyqqSJubFtgHugW0aGZlgknQzP41mV4aLVy5bY5stx1nUegxQEASfomtfllCFJBgww0IMCCNfGsZg8UzMQTmzSxMT2iddj6+dWw8snl3SYniJ6qBEqfHVY/OleNbIVLh1AykjmsHMubvpXFUzWwWnMD4ba7yR5xrTKJcygi5uB2W2Igd8j1GKt9uKldFJfUeonDQ5bf6Olcc4xZuW2tpdVnYSFEmQNT4bVUfIkMz4lP1UPsJ/GqGxwh0KXSCoykHvBeYA/ij1Duq2+Ri5lxWIX/wAbbeFxR99TgnTIZ1FNVxR2IYHXfSn3sAwCNBUG9ebP2SY00/pUi4zQpG8a6VTc500GHw+UHVd6fuWgYk7Aj2iKrsNm7QHrqViJhe/K3wFZhTVC7NlF2M6d42qQBppVLh1aSF5jlVvhycizvFBmi0wNzc5TpPdy9dM8SydU+ecmU5o3jnHjTjN2TofpffTPF1mxdA1JRvhQGMD1mARpbriJ5lVn3irbh+MwJuWxbttnLqFJeYM6GM5msrxbhzlV7FyZP0CfUdKh8BsuuMsFrbiLlsSVIA7W+1IpauBXsddu4YEknLJ8/wDlRSr47Rr2qBpEGiiilKBRRRWMFFFFYwlx2W+ya430GP8AeLg/Uf42q7MBv5GuM9BknF3BMdi4NftWqL8pN+YteM8IuXL63Vy/NCDmkyInQfvH100cNcsh/RzOc4AUhfRAECdPRrXNhHyXIAaR9EySY7t6o+MqQ6ggg9Wuh0POuLId2PLJpR+Ckt4q+Rr1Y/db/l+YqHxexcuW5Zh2CDtA2K+Z9KatVpGJTNbde9T8NKnCVSTGlG0zIDCdos2hJ5ag6ghh6xT/AAwJbv27heMrAb6DP2CTKjk25PKvbZBGjZvXNQsdoo8W+E/0r03FNHEnTs378SszHWoSdIBzb6AaT31b8Gwq3bhW4Gywx0IE6iO+uZ8MWXT7S/Gum9Gbk3v3W+Irgyx0SSXc68b1xbLxuC4fnbb/ADG75pK8Dwo/7bf5jd39asT+FJG4p9TJ0RU4Nhxtbb13CfuqpPQbAaHqrk7fp7nfNaYCktRU2uAaUzH8Q6GYFAoW3d573rhGgXlz3qG/RSwFWC4kQYO8HQ6z3Vq+L/Q/e+CVDY9lfXTLJLfcH247FT0gQm0OQGpjw0A209InltVH8jUf268Bv1V2f8xK0vF/+nfy+8Vk/kiaOJXefzd0f61/CqwexGezO3mz2gdNop4Lt4VCZiWUgco868OIJ20A9vjVKbJpoesWYzdoGaeNoGJ5Aj21WNeYbH3Cn8FiyzZW9XKi4vkMWuCWbeX0VX1mPuNOJMaxPhtSqKQcKy/EOOMvErGFUjI9t2uCBMwSmu4jIf4q1FclONz8fmdFfqx6kZPiTTRViyZ1NWPfXl2cshojXl7DRmg15caQB9Y+4an3CPXWMKRSRJJBPKdqKcopbCVNFFFAcKKKKxgooooGFWfS9RriXRK5lxV05Q2VWMHwuW9fMRPqrt1gdoVw7o9lGKu5tocHlobtsGm9Ij8x1FcVaK+nlkbEHTTvjeouIxyE5RdtMu0Pm19WUiqXrYEFvRlSDp6Jj7qh3jrBjz/PrpXiiwqTRd38NhWEs1pfsM6/7Y91VV61hh6OKQeDBj71X7qrsQTG/qqixNxlYZYzQY9kT3T/AEpX08SiySRGuWrVt3U3MknTsM4Ps1HrqFxDE5GVrVwNEgt1cDWNMtwHupvHOcwzEljJObU+v2UviFsdXaiM0Se+WJb+XKPUaq3WwhM4bxF3uW1dbRJdRmKAMJMTKR8K6D0Uf+8ASJyN3/hXOOj1kteSNhLHwgae+K6J0Rthr7EkgqhIiOZA1kHvrkzJOaOjE2oM24NehdR51HvPkEiTyjs/hTqljsw9az3dzClNRIIpFyofDsTcuW0uMVBYTAQ6es3Nac64klQRKiTKkDu07RrGqiNxj6H73wSq47CpvGluQp+b3IAzN3CT6PgPbVSesP0kH7jN/uFEJ7xQ/Mv9n76yPyTEDitwH6t0e/8ApWzZQy5WGYHfl8Kh8I4Nh7F/rrVqLhJBJZ2Bzb9lmI51aE0kRlBtnSnygTPogxUEbUq5aQQAonyHKm2FdGN2rIzWl0NuKbRiGB7qfIpp6qSLxTInvpVRcA8oPDSpVQaplk7R5XN8PwiyMSMTldbxxK5gzEwr3HCtl5ZgoPka6OTWETHq7s5GUK6E5igPYfSe0YGVSdYidY2EsmVQW/cthx63vwja5ZB+6kqvbGrGF3IEakdw30ppcdbPo3EPk6n4GljESHK6leXf2c2n8Q9tUbpWR5PFxQ+mCrSZABI30MxzEH10VSvj7jHMrMoP0SV0PMe2aK5P/VH5/QaJ1FFFdQwUUUVjBRRRQMLw/pCuD4cRfxA8LvuuKfurvOGHaFcGfTE4n/7v5z+FN6RPUagguA41zqreuMrf6lalK0aabT3/AJ/rVdZxZFhGEHK5Q8tGGZdR4q/tp1eLDdgZ8PxJPwow3iGXIq/bPId3nznXlyrLY9/nCI2HxrQNxgpJTQ7bDbn99ZfFYou5IWSImTMz8aYxGXDtcuhFMZiq+IBMSNNd6mcQRevvALIRiAswcq9gkd+23jUzo/kuYq2pUdkF4I7hprzEkVXY9ou3XXTLddhH1c5BAHdHxpL8dfA1eC/kvOBYVUttcWe2YE9y/wBSfZWn6GP8/c/ZH+daytlBkifoIRlJA7QJOx8avegiRiXjMZtMNST9JTsTXFJ3Ns6YqopG+xfoGpFkaev7hTWLSEJ7gT/pI++n8Ouns/lFEBE4Iv8Ad7X2FpOHMvdPqHtNOcF/QWvsLSLQh7vr+NBcIL5Z5x7/ALfnc/21UVb8f2t+dz/bVRRYFwFOWvSXzHxpuaVZ9JftD41jGue8A4BMSDHiecd+gr3Sh8OCDm7QkwCBrGmk+RrH4jFXUcW7T3GEyIMkoNSFkxPLWu3FLSqZxzTk7NbcpllprhuOR0Ls/ZGhmQQ31GWJDeHxprC4otfuA5hbKo1udJGoY+ROu/LxiqrIhNBb8OMGDz2qyqPasrCtAkDQkaiR47VIqcnbseKpFbxXGtbUFQpkgSxgDXnrOuwjnWF4m6C4UQA9a4R9QAetYAgQNSM0+EkVvOI2mKyj5WGo5yBvp+fGa5fexNt8WLYUqjBWdsp7TrcDSDlloBYa6TcIjUzwZE/ubvb2Lwlpi2uTRv0AwrHK/WDKJBDnMQeRO0761a4PCW7FjqLBMhsqMxOYsQNWYDXf3DupOH4sGuXLa5dGGsjUSBlCbiQDrt6PfFJGDt3ldgQDnZgWzKVYdlwNswBJGuk9+tGWbU1CL373/ZKq3IiYT/EuIjSZUsJXXQHXuiiqy00jtXHUyZCu+UanbKIjyoqHh91+w7+xsaKknCfre6j+yHvFelRrI1FPnCN4V4cK/d76xhminDh27jSDbI3BrGF4Y9sfnlXCcVpi8V4HEf8A7D91d2sKcy+f3GuFcTyrjsTn9GcTmg5TGW9zgx7DRXAr5HcExfD3UBAOTOCdptnMf9Of21BsWiw/6i2v7pPxIr3oy+Vjca7b6vMEKnMGbNowUEQRlM6kb6TtVLfwARmQ3SCjFTKHdTB5+FJutilpl+eHow1xQ/y//eqZbBXmMzz4xlIGnfv7qif2Q8rq+sMKRjbjDIrEHID2lJ5n+goxbvkG1Gp6KoiXDcuE5lSFOg+kCfA7RHdVDaxaljmBBzMTI7ySRHnyNR7GJEyXYeR28dajXnAaVOaefP1xT34rF7Fzh+IBOyGDLPcBpuIH5FbPoDif7yzD/DI9rCuZLf17Sz7uUVuvkwecQ+hACczP0hUcsU/EimOTTpnV8VfGQhwSCIMQDS1vSBBGvev3hvCkOgIg6ivUWDHjUC5W8DxhNvJ2fmiUmSJy84ymPLWphcq7SAS3JSZ/1KByNUPBCR1pH+Nd/nNX+XMwcd5n30EzMhcZxbMF+ZujKTqeqiGA5i54VVl7nJE9bmfYEI99aLG/o28qohRANZbn10HhkY+/OPhXtpGVg3WMYIMQgGn7s++nDXlGzGj4pxJDaYKxDIpfNaacuWIObQbnbXyNUuBvqCX3gZbZBksFXUnTfeYBgg8gSE4bBWVsm6wzAQxUh1FxyCzjJpAgFQIjarno/wAOQIA6S0AsT6LCS0R9okn1bwIpHVds5tqGrPCi9wuxUXcitl3BUkgC4PpAxEjY82AqZjcSRctFxldWKlTsysPSVvpCQPHU6aGq7pPxK9hHt9Razqy5RCszSp1WQZIggxrzrP4/pbedQt/D3Fhgyk2rq5WB0YEr589RIrprYmnTOprtXtc54j8oi4a51dwA9lSCXUSrCQYy+Y35U3b+VawdwPVlP+8UKGs33FLuSzcfmiOw5+ipP3VxzDYnrLJK5Wck5ymgXOxdQRmLZvAdx1MTWstdPsNjM+FAcNcttr82umxAOdiSQdo2nurHdD7lxzcU2ygzXAHm45diWUKMrBFK6jNGo8tePqHCmm1a3/ZWD8PHJpeEdIDh5i3bKmCVjIzOywq2ZMEkAzppBnTWrbEX2yI7FUQuxVmuJLtmJAQ9mTIb0iJgAgGqHCI2ZyAFyDW5dXtGSSzDL6WgI22Prp7DcQtOoW8G6sjrMgGe2EkHUuQVYiQSBoRPdXNjnbScdlx/Ykj25hgxLdagnWHaWE69rKInyoqHjsLYznTksQREZRES87d+tFQ+2/n9Fda/5isP8smGP6TC3kP6jI/xK1dYT5VeGvEvdt/btuf5M1fPjrrT2BsszEqJyKzt4Kokn4V7ZE+lsP074a+2NtDwc9X/ADgVa4XjFi7Bt37NwH6lxG+Br5PVSdfzNPW1lWWNhPl+fvrGPrkkxprQG8K+VejvHGwlwvlZ1KkZBce2ATEMCvMR3c6k2emvELZJt4y+ASSFa41wAch85NDew0qPp2823LUe+QK4pj+jN3E47EC3kOZ7oK9YqvlYOGKht4FwVn8P8qXFF9K+twdz2rfxRVPvqJf6RYxiMTGR3uMyXEBUSPTySZ0LAe6jdICi5PY1GH+Ti4DBs3J/aJMfu8qnXehTyS2HaTrJNxp8eyKreEfKRxJMoui1fH665Hjwe3A9ZU1r8J8qNgELiLdyy3M22F+2PPQMPIKazaCoSeyM2/RjJvbUea3T8RTY4PbG4t/5bn411LhfSzCYiOpxNlydkLdXc/geG91XRuD6SkeqR7qOwtM4ovDbQ5IfK0PvNIfBJyA9VpBXbDh7T7ojeaqfuppuE2DvZtfwL+FY1HFxZjYN6so09Qq76KJF0yG9HmZ5jwrozcAwx/7KeqR8DTX/AMfsJrbXI3fJM+EMaSatUNB07IBaK9B19dS73CJBHWrr3r/7U0OHusANbMfrEbeGU1Bwl7F/uRMtwYaXf213+c1e4dvo99QsFwW9bz5jabNcuOMrtszEgdpBrrVjasupkofUV/Gk+3JPgbXH3E48fNt5VQ1ocSsoVCtJB+gx94EVSPg7vO2VHIsVA+M+6mUJPsBzS7kdjSZovWHG9y0n2mkfFaR/+OcjM2LtgDU5FWAPMlvbNOsUhHkiRrWJQtsQPSbVtQuuomNYAqdhuLspJF25B5Egr6gFptuG2WEdaTEzlBaI3nKp76esYSxsGuNBy+gwE905fGunZPdnN2JD8TS4uS4lq6p5XEB9ekQfGq/iOD6wD+zYi7hSBobd24VmZnqy8eETU29hbaEDqrrkifmxn0OmusD10xxfE2MNbV7lt4a51QBiQxDHXWAOwdZ7q2qHuBKT4RV8RTH9XbTC4xVa2CtzOoy3DAIcDK8NqZHv0pnA8Ix10EYnEWsxGkWsGVGrAyWTMdAp2G+9PXOklq2pKYVnO8FlWfcdag8G6VddcuPbwpTq7RcziLjJGdR+jyhQZbcCRttU8mlRe7XyUUZPethPDOCY+0rqUsQGzC4LagorCGygBEzEGdXkDTuqRw3C2sMpWyzjMQ4BRbgCwQ1zSYMQo11nXTe0tceuCSEtgExJ6zKQIPpEiD2to3pNnGrcuA3EtifpZQW0I7DFtVmeRIEazXm5MmOTavZ/AbexSXLBLNcuXXZiWJy5VQWw2Vc5C9nsRM7TuBVZinZrjQwyqGygaEdkkQN5jSZ85g1qbrsc9u0nZuHW2mWIIiVIZQCxWSuno1nMXg7ai4xydlEhrbDt3coW4dVJAmYjQzI3qeGTct3/AANyUp4rHM+rUa66SKKcw6YfKDctBmMknM6zJkaA6aEV7XfaJ2V9/oXjh/2I/wDstf8AOmm4NiMNavPdt5Fa2EBzI2pu2zsrE6gGvaK6giuF4B7z2cPaUM7gZFYgLmcFyWJ5KoJ9saxW7HAhgr9lHKO/atXGRSoIcfSB3kEbadkGASQCigjM5NcTKSvcSPYYrxVkgbSQJ7qKKxheIs5HZCRKkqYmCQYkabVdtfVsHh1B1R74Ya6ZijDXnoaKKWXBfp/P+GRxbXQsxE9yzHvry9bWPmyWEakgLB7onxoopaRnmnfJBvXfogA+dXvAeOY9bgt4K/d2OVc4ykDc5LhyDviOcUUVQgbhvlB4lhFX+3YW04ZsoIZUdiFBMm2zLsy/RG/sl3vlZV7YIwbBWYpreggAZpGVN403FFFGO9Afckr07J7S2IzAGDdYj2ZYqPf6Yu5UmxZlDKFgzFTtKmRBr2igjDV3ptif/Evkjfexqrx/TvFR83eAJMaW17j9ZaKKwDK3OnvEjM4ptO5LQ+CVBudLcc/pYy96rjL/ACxXtFYY2fyZ4HE4q817EX7rWbI9F7ruHdhoGUseyB2vPL410k8Gw85TZtFomDbUmPOIoopJcmHLfCbaaqir9lVHwp+XXUHT86UUUDB1zRsp35a+o15dxZGpXYRGhHdRRSSMepfWZAjTeO8aeNYT5XbgNjDqDINxzz5IBz+0fbRRS6VZ0dP/AJEZTo7jOtHVv6SjQ/WXbXxFXvBuFqt24ygxcTVQY1GuhO0/HuoooZ98Ts2fwZGkSr3BWuXJZm6oN1bQQGJVJ07icup5kmqocUazcKRI6wJr6S5W5MNiddpHaNFFccIq/wAEo8HvEz20uTBMKu8gCJVjOqkA6GZ7xVbxXjAsu5s6ISFUagEJ2HEDaQpOum8RNe0VeEVsCW0jPYbjOIVQq3bgAmAGMDXlrRRRXYA//9k="], ["title", "Office Movers"], ["price", 5000], ["moverName", "Peter"], ["location", "Ngong road"], ["created_at", "2022-08-04 10:37:42.317343"], ["updated_at", "2022-08-04 10:37:42.317343"]]
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/profiles_controller.rb:8:in `create'
+[active_model_serializers] Rendered ProfileSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 201 Created in 30ms (Views: 1.5ms | ActiveRecord: 13.8ms | Allocations: 2078)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:37:51 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:37:51 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (1.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.88ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 1.9ms | Allocations: 3597)
+
+
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (2.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.01ms)
+Completed 201 Created in 19ms (Views: 3.3ms | ActiveRecord: 7.8ms | Allocations: 4426)
+
+
+Started POST "/requests" for 127.0.0.1 at 2022-08-04 13:38:41 +0300
+Processing by RequestsController#create as */*
+  Parameters: {"moving_from"=>"Fedha", "moving_to"=>"Karen", "moving_date"=>"2022-08-20", "additional_info"=>"Home", "request"=>{"moving_from"=>"Fedha", "moving_to"=>"Karen", "moving_date"=>"2022-08-20", "additional_info"=>"Home"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/requests_controller.rb:8:in `create'
+[31mUnpermitted parameter: :request[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/requests_controller.rb:9:in `create'
+  [1m[36mRequest Create (3.5ms)[0m  [1m[32mINSERT INTO "requests" ("moving_from", "moving_to", "moving_date", "additional_info", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["moving_from", "Fedha"], ["moving_to", "Karen"], ["moving_date", "2022-08-20"], ["additional_info", "Home"], ["user_id", 28], ["created_at", "2022-08-04 10:38:41.489124"], ["updated_at", "2022-08-04 10:38:41.489124"]]
+  ↳ app/controllers/requests_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/requests_controller.rb:9:in `create'
+[active_model_serializers] Rendered RequestSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 201 Created in 41ms (Views: 3.5ms | ActiveRecord: 21.2ms | Allocations: 6148)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-08-04 13:40:41 +0300
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `destroy'
+Completed 204 No Content in 4ms (ActiveRecord: 0.4ms | Allocations: 609)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-04 13:40:50 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Cate", "password"=>"[FILTERED]", "session"=>{"username"=>"Cate", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Cate"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 298ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 1793)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 13:40:56 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 13:40:56 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.34ms)
+Completed 201 Created in 40ms (Views: 4.4ms | ActiveRecord: 1.9ms | Allocations: 2399)
+
+
+  [1m[36mProfile Load (2.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.92ms)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 2.7ms | Allocations: 4458)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-08-04 13:46:19 +0300
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 0.2ms | Allocations: 607)
+
+
+Started GET "/requests" for 127.0.0.1 at 2022-08-04 13:48:03 +0300
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.8ms)[0m  [1m[34mSELECT "requests".* FROM "requests"[0m
+  ↳ app/controllers/requests_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.4ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms | Allocations: 1010)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-04 14:02:35 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Cate", "password"=>"[FILTERED]", "session"=>{"username"=>"Cate", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Cate"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.72ms)
+Completed 200 OK in 326ms (Views: 5.4ms | ActiveRecord: 9.6ms | Allocations: 4896)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 14:02:40 +0300
+Processing by UsersController#show as */*
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 14:02:40 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:19:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.75ms)
+Completed 201 Created in 19ms (Views: 4.1ms | ActiveRecord: 1.4ms | Allocations: 2643)
+
+
+  [1m[36mProfile Load (3.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.16ms)
+Completed 200 OK in 69ms (Views: 43.8ms | ActiveRecord: 24.4ms | Allocations: 7577)
+
+

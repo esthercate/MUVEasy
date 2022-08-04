@@ -76,6 +76,7 @@ const MoverList = ({ profile }) => {
           >
             Details
           </Button>
+
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Request for Transport</Modal.Title>
