@@ -1,8 +1,9 @@
-import React from 'react'
-import { Container } from 'reactstrap'
-import Dashboard from '../components/UI/Dashboard'
+import React from "react";
+import { Container } from "reactstrap";
+import Dashboard from "../components/UI/Dashboard";
 
-const MoverDashboard = ({user,setUser}) => {
+const MoverDashboard = ({ user, setUser }) => {
+
   return (
     <>
       <Container>
@@ -10,6 +11,6 @@ const MoverDashboard = ({user,setUser}) => {
       </Container>
     </>
   );
-}
+};
 
-export default MoverDashboard
+export default MoverDashboard;

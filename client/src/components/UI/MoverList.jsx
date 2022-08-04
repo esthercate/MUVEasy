@@ -48,7 +48,7 @@ const MoverList = ({ profile }) => {
         <div className="mover_item-content mt-4">
           <h5 className="section__title text-center">{title}</h5>
           <h6 className="transport__price text-center">
-            Ksh {price}00 <span>/ hr</span>
+            Ksh {price} <span>/ hr</span>
           </h6>
 
           <div className="mover_item-info d-flex align-items-center justify-content-between mt-3 mb-4">

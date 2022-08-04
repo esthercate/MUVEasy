@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Table from "react-bootstrap/Table";
 import ProfileForm from "./ProfileForm";
 import "../../styles/dashboard.css";
 
-
 const Dashboard = ({ user, setUser }) => {
+  const [myRequests, setMyRequests] = useState([]);
+
   const nav = useNavigate();
-  
+
+  useEffect(() => {
+    // fetch user profiles
+    fetch("/requests")
+      .then((res) => res.json())
+      .then((req) => setMyRequests(req));
+  }, []);
+
   function handleLogout() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
-        nav("/home")
+        nav("/home");
       }
     });
   }
- 
+
+
 
   return (
     <div className="my-dashboard">
@@ -28,8 +37,8 @@ const Dashboard = ({ user, setUser }) => {
             <div className="avatar d-flex">
               <div className="user_image"></div>
               <div className="user_details">
-                <h6>{user ? user.username : "Jane Doe"}</h6>
-                <p>@{user ? user.username : "Jane Doe"}</p>
+                <h6>{user ? user.username : " "}</h6>
+                <p>@{user ? user.username : " "}</p>
               </div>
             </div>
 
@@ -78,14 +87,11 @@ const Dashboard = ({ user, setUser }) => {
 
           <Col lg="9" className="right-col p-4">
             <div className="dashboard-title mb-4">
-              <h2>Customer Requests</h2>
+              <h2>Welcome {user ? user.username : "Jane Doe"}</h2>
             </div>
 
-            <div className="subtitle">
-              <h5>Pending Customer Requests</h5>
-              <p>
-                Manage customer requests by accepting or rejecting offers here.
-              </p>
+            <div className="subtitle mb-4">
+              <h6>Manage your requests for transport services</h6>
             </div>
 
             <div className="dashboard-table">
@@ -93,50 +99,28 @@ const Dashboard = ({ user, setUser }) => {
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>From - To</th>
-                    <th>Reject</th>
-                    <th>Accept</th>
+                    <th>Moving Date</th>
+                    <th>Moving From</th>
+                    <th>Moving To</th>
+                    <th>Additional Info</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
+
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Oct,01,2022</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                      <i class="ri-close-line"></i>
-                    </td>
-                    <td>
-                      <i class="ri-check-line"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Oct,01,2022</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>
-                      <i class="ri-close-line"></i>
-                    </td>
-                    <td>
-                      <i class="ri-check-line"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Oct,01,2022</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
-                    <td>
-                      <i class="ri-close-line"></i>
-                    </td>
-                    <td>
-                      <i class="ri-check-line"></i>
-                    </td>
-                  </tr>
+                  {myRequests.map((request) => (
+                    <tr key={myRequests.id}>
+                      <td>1</td>
+                      <td>{request.moving_date}</td>
+                      <td>{request.moving_from}</td>
+                      <td>{request.moving_to}</td>
+                      <td>{request.additional_info}</td>
+                      <td>
+                        <i class="ri-close-line"></i>
+                        <i class="ri-check-double-line"></i>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             </div>

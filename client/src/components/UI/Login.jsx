@@ -22,7 +22,8 @@ const Login = ({ onLogin }) => {
       .then((r) => {
         if (r.ok) {
           r.json().then((user) => onLogin(user));
-            nav("/mydashboard")
+          nav("/mydashboard");
+          window.location.reload();
         } else {
           alert("Incorrect Login Details");
         }

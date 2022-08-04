@@ -26,7 +26,8 @@ const Register = ({ onLogin }) => {
       console.log(r);
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-        nav("/mydashboard")
+        nav("/mydashboard");
+        window.location.reload();
       }
     })
 
