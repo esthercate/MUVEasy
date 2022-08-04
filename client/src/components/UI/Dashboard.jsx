@@ -1,23 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-import Table from "react-bootstrap/Table";
 import ProfileForm from "./ProfileForm";
 import "../../styles/dashboard.css";
+import RequestTable from "./RequestTable";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 
 const Dashboard = ({ user, setUser }) => {
-  const [myRequests, setMyRequests] = useState([]);
-
-  const [markDone, setMarkDone] = useState(false);
-
   const nav = useNavigate();
 
-  useEffect(() => {
-    // fetch user profiles
-    fetch("/requests")
-      .then((res) => res.json())
-      .then((req) => setMyRequests(req));
-  }, []);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   function handleLogout() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
@@ -27,12 +24,6 @@ const Dashboard = ({ user, setUser }) => {
       }
     });
   }
-
-  function handleMarked() {
-    setMarkDone(true);
-  }
-
-
 
   return (
     <div className="my-dashboard">
@@ -56,10 +47,29 @@ const Dashboard = ({ user, setUser }) => {
                 </Link>
               </div>
               <div className="links mb-3">
-                <Link to="">
+                <Link to="" onClick={handleShow}>
                   {" "}
                   <i class="ri-lock-line"></i> <span>Create Profile</span>
                 </Link>
+
+                {/*================== profile form modal ================ */}
+
+                <Modal size="lg" show={show} onHide={handleClose}>
+                  <Modal.Header closeButton></Modal.Header>
+                  <Modal.Body>
+                    <div className="profileform hidden">
+                      <ProfileForm user={user} />
+                    </div>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                      Save Changes
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
               <div className="links mb-3">
                 <Link to="#">
@@ -93,49 +103,11 @@ const Dashboard = ({ user, setUser }) => {
 
           <Col lg="9" className="right-col p-4">
             <div className="dashboard-title mb-4">
-              <h2>Welcome {user ? user.username : "Jane Doe"}</h2>
+              <h2>Welcome {user ? user.username : " "}</h2>
             </div>
 
-            <div className="subtitle mb-4">
-              <h6>Manage your requests for transport services</h6>
-            </div>
-
-            <div className="dashboard-table">
-              <Table hover size="sm">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Moving Date</th>
-                    <th>Moving From</th>
-                    <th>Moving To</th>
-                    <th>Additional Info</th>
-                    <th>Completed</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {myRequests.map((request) => (
-                    <tr key={myRequests.id}>
-                      <td>1</td>
-                      <td>{request.moving_date}</td>
-                      <td>{request.moving_from}</td>
-                      <td>{request.moving_to}</td>
-                      <td>{request.additional_info}</td>
-                      <td onClick={handleMarked}>
-                        {!markDone ? (
-                          <i class="ri-close-line"></i>
-                        ) : (
-                          <i class="ri-check-double-line"></i>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-
-            <div className="profileform">
-              <ProfileForm user={user} />
+            <div>
+              <RequestTable />
             </div>
           </Col>
         </Row>

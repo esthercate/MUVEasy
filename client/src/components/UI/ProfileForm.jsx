@@ -32,14 +32,14 @@ const ProfileForm = ({user}) => {
   return (
     <>
       <Container>
-        <Row className="mt-5 mb-5">
+        <Row className="mt-1 mb-1">
           <Col
             lg={9}
             md={6}
             sm={12}
-            className="p-5 m-auto shadow-sm rounded-lg"
+            className="p-3 m-auto shadow-sm rounded-lg"
           >
-            <h4 className="shadow-sm title p-3 mb-5 m-auto text-center rounded">
+            <h4 className="shadow-sm title p-3 mb-4 m-auto text-center rounded">
               Create Profile
             </h4>
 

@@ -23,16 +23,16 @@
 .quick_link {
     border: none;
     background-color: transparent!important;
-    text-align: center;
+    text-align: left;
     justify-items: left;
 }
 
 .footer_link_title {
-    text-align: center;
+    text-align: left;
 }
 
 .quick_link a {
-    color: #e8e8fd;
+    color: #e8e8fd !important;
     opacity: 80%;
     background: transparent;
     text-decoration: none;

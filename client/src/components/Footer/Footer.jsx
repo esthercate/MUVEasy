@@ -30,7 +30,7 @@ const Footer = () => {
     <footer className="footer">
       <Container className="footer_container">
         <Row>
-          <Col lg="4" md="4" sm="12">
+          <Col lg="6" md="4" sm="12">
             <div className="footer_logo d-flex gap-3">
               <span className="bottom_logo">
                 <i class="ri-truck-line"></i>
@@ -41,13 +41,13 @@ const Footer = () => {
             </div>
             <p className="footer_logo_content">
               Anim Lorem pariatur occaecat elit duis cillum reprehenderit
-              deserunt dolore laboris voluptate. Sunt aliqua dolor occaecat quis
-              velit consectetur consequat labore ut cupidatat ex aliqua
+              deserunt <br/>dolore laboris voluptate. Sunt aliqua dolor occaecat quis
+              velit <br/> consectetur consequat labore ut cupidatat ex aliqua
               voluptate.
             </p>
           </Col>
 
-          <Col lg="4" md="4" sm="6">
+          <Col lg="3" md="4" sm="6">
             <div className="mb-4">
               <h5 className="footer_link_title">Quick Links</h5>
               <ListGroup>
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="4" md="4" sm="6">
+          <Col lg="3" md="4" sm="6">
             <div className="mb-4">
               <h5 className="footer_link-title mb-2">Head Office</h5>
               <p className="office_info">

@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import {Link} from "react-router-dom"
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/hero-slider.css";
 
@@ -30,7 +31,7 @@ const HeroSlider = () => {
                 mover here and request for relocation services!
               </h5>
               <button className="btn get_started_btn mt-4 py-3 px-5">
-                Get Started
+                <Link to="/register">Get Started</Link>
               </button>
             </div>
           </Col>
@@ -42,6 +43,12 @@ const HeroSlider = () => {
               <div className="slider_item slider_item-02 mt-0"></div>
 
               <div className="slider_item slider_item-03 mt-0"></div>
+
+              <div className="slider_item slider_item-04 mt-0"></div>
+
+              <div className="slider_item slider_item-05 mt-0"></div>
+
+              <div className="slider_item slider_item-06 mt-0"></div>
             </Slider>
           </Col>
         </Row>
