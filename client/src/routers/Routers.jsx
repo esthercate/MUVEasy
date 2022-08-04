@@ -13,7 +13,7 @@ import Register from '../components/UI/Register'
 const Routers = ({profiles, user, setUser}) => {
   return (
     <Routes>
-      {/*<Route path="/" element={<Navigate to="/home" />} /> */}
+      *<Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home profiles={profiles} />} />
       <Route
         path="/mydashboard"

@@ -11135,3 +11135,72 @@ Completed 401 Unauthorized in 150ms (Views: 0.9ms | ActiveRecord: 45.8ms | Alloc
 Completed 200 OK in 220ms (Views: 28.7ms | ActiveRecord: 166.9ms | Allocations: 17022)
 
 
+Started GET "/me" for ::1 at 2022-08-04 09:42:10 +0300
+Started GET "/profiles" for ::1 at 2022-08-04 09:42:10 +0300
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by ProfilesController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (36.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 132ms (Views: 0.9ms | ActiveRecord: 48.0ms | Allocations: 9839)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.26ms)
+Completed 200 OK in 234ms (Views: 78.4ms | ActiveRecord: 126.4ms | Allocations: 16288)
+
+
+Started GET "/profiles" for ::1 at 2022-08-04 09:43:11 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for ::1 at 2022-08-04 09:43:11 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (2.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.82ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 2.1ms | Allocations: 3129)
+
+
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 42ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 3187)
+
+
+Started GET "/profiles" for ::1 at 2022-08-04 09:43:14 +0300
+Processing by ProfilesController#index as */*
+Started GET "/me" for ::1 at 2022-08-04 09:43:14 +0300
+Processing by UsersController#show as */*
+  [1m[36mProfile Load (106.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 134ms (Views: 26.9ms | ActiveRecord: 106.8ms | Allocations: 3211)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 134ms (Views: 0.2ms | ActiveRecord: 90.3ms | Allocations: 3267)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 09:44:14 +0300
+Processing by ProfilesController#index as HTML
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.2ms)
+Completed 200 OK in 81ms (Views: 80.5ms | ActiveRecord: 0.6ms | Allocations: 2353)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-04 09:44:51 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 401 Unauthorized in 7ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 706)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2022-08-04 09:44:51 +0300
+Processing by ProfilesController#index as */*
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/controllers/profiles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.35ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 2363)
+
+

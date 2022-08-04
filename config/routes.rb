@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :requests
   resources :profiles, only: [:index, :create]
   resources :users
 
