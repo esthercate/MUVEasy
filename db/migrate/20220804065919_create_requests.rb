@@ -5,6 +5,7 @@ class CreateRequests < ActiveRecord::Migration[6.1]
       t.string :moving_to
       t.string :moving_date
       t.string :additional_info
+      t.integer :user_id
 
       t.timestamps
     end
