@@ -1,6 +1,7 @@
 .my-dashboard{
     margin: 4rem 0;
 }
+
 .left-col{
     background: #f8f8ff;
     border-radius: 10px 0px 0px 10px;
@@ -53,4 +54,26 @@ i {
   border: 1px solid #1a194d10;
   border-radius: 0px 10px 10px 0px;
   background-color: #fcfcff;
+}
+
+.outer_container {
+    background: #ee4d38;
+    padding: 4rem;
+    z-index: -99;
+    width: 15%;
+    height: 550px;
+    position: absolute;
+    margin-left: -2.5rem;
+    margin-top: 1.5rem;
+    border-radius: 30px;
+}
+
+.outer {
+    padding: 4rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .outer_container {
+        display: none;
+    }
 }
