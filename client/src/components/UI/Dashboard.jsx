@@ -8,6 +8,8 @@ import "../../styles/dashboard.css";
 const Dashboard = ({ user, setUser }) => {
   const [myRequests, setMyRequests] = useState([]);
 
+  const [markDone, setMarkDone] = useState(false);
+
   const nav = useNavigate();
 
   useEffect(() => {
@@ -24,6 +26,10 @@ const Dashboard = ({ user, setUser }) => {
         nav("/home");
       }
     });
+  }
+
+  function handleMarked() {
+    setMarkDone(true);
   }
 
 
@@ -103,7 +109,7 @@ const Dashboard = ({ user, setUser }) => {
                     <th>Moving From</th>
                     <th>Moving To</th>
                     <th>Additional Info</th>
-                    <th>Delete</th>
+                    <th>Completed</th>
                   </tr>
                 </thead>
 
@@ -115,9 +121,12 @@ const Dashboard = ({ user, setUser }) => {
                       <td>{request.moving_from}</td>
                       <td>{request.moving_to}</td>
                       <td>{request.additional_info}</td>
-                      <td>
-                        <i class="ri-close-line"></i>
-                        <i class="ri-check-double-line"></i>
+                      <td onClick={handleMarked}>
+                        {!markDone ? (
+                          <i class="ri-close-line"></i>
+                        ) : (
+                          <i class="ri-check-double-line"></i>
+                        )}
                       </td>
                     </tr>
                   ))}
@@ -125,7 +134,7 @@ const Dashboard = ({ user, setUser }) => {
               </Table>
             </div>
 
-            <div className="profileform hidden">
+            <div className="profileform">
               <ProfileForm user={user} />
             </div>
           </Col>
