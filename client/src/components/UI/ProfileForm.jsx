@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "../../styles/profileform.css";
 
-const ProfileForm = ({user}) => {
+const ProfileForm = ({ user }) => {
+  const nav = useNavigate();
 
   const [imgUrl, setImgUrl] = useState("");
   const [moverName, setMoverName] = useState("");
@@ -27,6 +29,8 @@ const ProfileForm = ({user}) => {
     })
       .then((r) => r.json())
       .then((profile) => console.log(profile));
+    nav("/home");
+    window.location.reload();
   }
 
   return (
@@ -108,6 +112,6 @@ const ProfileForm = ({user}) => {
       </Container>
     </>
   );
-}
+};
 
 export default ProfileForm
