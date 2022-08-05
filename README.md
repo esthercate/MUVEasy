@@ -1,4 +1,4 @@
-# Project Template: React/Rails API
+# MUVEasy Project: React/Rails API
 
 ## Description
 
