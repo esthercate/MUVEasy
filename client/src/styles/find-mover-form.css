@@ -4,13 +4,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 65px 35px;
+  padding: 65px;
 }
 
 .find_movers-left h2 {
   font-weight: 600;
   font-size: 1.5rem;
-  color: #ee4d38;
+  color: #e8e8fd;
+  text-align: center;
 }
 
 .form__group {

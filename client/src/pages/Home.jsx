@@ -34,14 +34,12 @@ const Home = ({profiles}) => {
       <section>
         <Container>
           <Row>
-            {profiles.slice(0, 21).map((profile) => (
+            {profiles.map((profile) => (
               <MoverList profile={profile} key={profile.id} />
             ))}
 
             <div className="find-more text-center">
-              <button className="btn px-5 py-2">
-                Load More
-              </button>
+              <button className="btn px-5 py-2">Load More</button>
             </div>
           </Row>
         </Container>
